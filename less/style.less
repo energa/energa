@@ -34,10 +34,9 @@
     }
     .chart-title {
       position: absolute;
-      top: 0;
-      left: -80px;
+      top: 0; left: 0; text-align: left;
       .bold;
-      font-size: 1.8em;
+      font-size: 1.7em;
     }
     .arrow-up {
       opacity: 0;
@@ -228,11 +227,12 @@ p {
     padding-bottom: 1.5em; //.62em docelowo
     font-size: 1.1em;
     opacity: 0;
+	
   }
 }
 
 .fakt {
-  margin-bottom: 40px;
+  margin-bottom: 70px;
   .fi {
     vertical-align: bottom;
     margin-right: 20px;
@@ -252,9 +252,14 @@ p {
     display: inline-block;
     padding-bottom: 15px;
   }
+  
+  .highest-quality {
+	padding-bottom: 32px;
+  }
+  
 }
 .fakto {
-//  display: table;
+ display: table;
   margin-bottom: 40px;
   padding-left: 120px;
   opacity: 0;
@@ -265,7 +270,7 @@ p {
   }
   .fh {
     display: inline-block;
-    font-size: 4em;
+    font-size: 3.6em;
     color: @green-color;
     .bold;
     margin: 0 .15em;
@@ -282,6 +287,16 @@ p {
 //    display: table-cell;
     display: inline-block;
     padding-bottom: 15px;
+  }
+  
+  
+  
+  & > img,
+  & > div.fakto-text {
+	display: table-cell; line-height: 225%; 
+  }
+  & > div.fakto-text {
+	padding-left: 20px; 
   }
 }
 
@@ -494,6 +509,16 @@ body {
   .next {
     background: transparent url(../images/dzis-next.png) 0 0 no-repeat;
   }
+}
+
+
+.desc { 
+	span {
+		display: inline-block;
+	}
+	.desc-text {
+		padding-left: 20px;
+	}
 }
 
 #rp-wrapper {
@@ -759,8 +784,8 @@ body {
           }
         }
         #ci2 {
-          top: 11px;
-          left: 115px;
+          top: 130px;
+          left: 130px;
           @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
             top: 0;
             left: 84px;
@@ -778,6 +803,10 @@ body {
       position: static;
       margin-bottom: 20px;
     }
+  }
+  
+  .text-note {
+	padding-top: 0;
   }
 }
 
@@ -826,7 +855,8 @@ body {
       }
      p {
       text-align: left;
-      font-size: 0.9em;
+      font-size: 0.8em;
+	  padding-top: 40px;
     }
      color: #fff;
     .title {
@@ -1138,9 +1168,9 @@ ul.nav {
   z-index: 1042;
   overflow: hidden;
   position: fixed;
-  background: #fff;
+  background: #000;
   opacity: 0.8;
-  filter: alpha(opacity=80); }
+  filter: alpha(opacity=60); }
 
 .mfp-wrap {
   top: 0;
@@ -1495,3 +1525,15 @@ img.mfp-img {
   top: 0;
   right: 0;
   padding-top: 0; }
+ 
+.text-note {
+	font-size: 0.7em; padding-top: 30px;
+} 
+
+.home-img {
+	text-align: center;
+	padding: 0 20px 0 20px;
+}
+.home-img + div {
+	padding-top: 50px;
+}
