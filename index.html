@@ -19,7 +19,8 @@
     <script src="js/inview.js"></script>
     <script src="js/chart.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/less.js"></script>
+    <!--<script src="js/less.js"></script>-->
+    <script src="js/jquery.color.js"></script>
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
@@ -134,21 +135,21 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
             <div id="rpc1" class="rp-counter">
               <label>2012</label>
               <div class="cake">
-                <span class="counter" data-stop="13" data-duration="2000">13</span>
+                <span class="counter" data-stop="13" data-duration="1000">13</span>
                 <span class="raisin">.</span>
               </div>
             </div>
             <div id="rpc2" class="rp-counter">
               <label>2011</label>
               <div class="cake">
-                <span class="counter" data-stop="14" data-duration="2000">13</span>
+                <span class="counter" data-stop="14" data-duration="1000">13</span>
                 <span class="raisin">.</span>
               </div>
             </div>
             <div id="rpc3" class="rp-counter">
               <label>2010</label>
               <div class="cake">
-                <span class="counter" data-stop="15" data-duration="2000">13</span>
+                <span class="counter" data-stop="15" data-duration="1000">13</span>
                 <span class="raisin">.</span>
               </div>
             </div>
@@ -270,213 +271,179 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
 
 
 
-        <!-- Tab panes -->
-        <div class="tab-content trigger" id="tbc1" data-trigger="tabcontent">
-          <ul class="nav visible-xs visible-sm">
-            <li class="active"><a href="#dystrybucja" data-toggle="tab">Dystrybucja</a></li>
-          </ul>
-          <div class="tab-pane fade in active" id="dystrybucja">
+            <!-- Tab panes -->
+        <div class="tab-content" id="tbc1" >
+              <ul class="nav visible-xs visible-sm">
+                <li class="active"><a href="#dystrybucja" data-toggle="tab">Dystrybucja</a></li>
+              </ul>
+              <div class="tab-pane fade in active" id="dystrybucja">
 
-          
-          <div class="fakt">
-            <div class="icon"><img src="images/f1.png" /></div>
-              <div class="desc">
-                sieć dystrybucyjna o długości ponad <span class="fh">193</span> <span class="fb">tys. km</span>
-              </div>         
-            </div> 
-
-           <div class="fakt">
-            <div class="icon"><img src="images/f2.png" /></div>
-              <div class="desc">
-               obejmuje powierzchnię <span class="fh">77</span> <span class="fb">tys. km²</span> czyli 25% obszaru Polski
-              </div>         
-            </div>  
-            
-            <div class="fakt">
-            <div class="icon"><img src="images/f3.png" /></div>
-              <div class="desc">
-                ponad <span class="fh">20</span> <span class="fb">TWh</span> energii przesyłanej rocznie**
-              </div>         
-            </div> 
-             <div class="fakt">
-            <div class="icon"><img src="images/f4.png" /></div>
-              <div class="desc">
-               ponad <span class="fh">75%</span> <span class="fb">zysku EBITDA</span>pochodzi z kluczowego dla Grupy segmentu dystrybucji
-              </div>         
-            </div> 
-         
-		 
-				<div class="text-note">
-					* dane na dzień 30.09.2013 r., chyba, że wskazano inaczej<br />
-					** dane na dzień 31.12.2012 r.
-				</div>
-		 
-             </div> 
-        <!--<div class="fakt"><span class="fi"><img src="images/f1.png" /></span>sieć dystrybucyjna o długości ponad <span class="fh">193</span> <span class="fb">tys. km</span></div>
-            <div class="fakt"><span class="fi"><img src="images/f2.png" /></span>obejmuje powierzchnię <span class="fh">77</span> <span class="fb">tys. km²</span> czyli 25% obszaru Polski</div>
-            <div class="fakt"><span class="fi"><img src="images/f3.png" /></span>ponad <span class="fh">20</span> <span class="fb">TWh</span> energii przesyłanej rocznie (dane na 31.12.2012r.)</div>
-            <div class="fakt"><span class="fi"><img src="images/f4.png" /></span>ponad <span class="fh">75%</span> <span class="fb">zysku EBITDA</span> <span class="fs">pochodzi z kluczowego dla <br />Grupy segmentu dystrybucji</span></div> -->
-			
-			
-			
-          <ul class="nav visible-xs visible-sm" style="margin-top: 60px;">
-            <li class="active"><a href="#wytwarzanie" data-toggle="tab">Wytwarzanie</a></li>
-          </ul>
-          <div class="tab-pane fade" id="wytwarzanie">
-            <div class="row">
-              <div class="col-md-12 col-lg-6">
-              <!--
-              <div class="fakt"><span class="fi"><img src="images/f5.png" /></span><span class="fh">4,1</span> <span class="fb">TWh</span> <span class="fs">energii <br />produkowanej <br />rocznie</span></div>
-              -->
-                <div class="fakt">
-                    <div class="icon"><img src="images/f5.png" /></div>
-                    <div class="desc">
-                      <span class="fh">4,1</span> <span class="fb">TWh</span><span class="desc-text">energii <br />produkowanej<br /> rocznie**</span>
-                    </div>         
-                 </div> 
-              </div>
               
-              <div class="col-md-12 col-lg-6">
-              <div class="fakt">
-                <div class="icon"><img src="images/f6.png" /></div>
+                <div class="faktitem fakt trigger" id="tbcf1" data-trigger="faktitem">
+                  <div class="icon"><img src="images/f1.png" /></div>
                   <div class="desc">
-                <span class="fh">1,3</span> <span class="fb">GW</span> <span class="desc-text">łącznej mocy <br />wytwórczej<span>
-              </div>         
-            </div> 
-             </div> 
-               <!-- 
-              <div class="fakt"><span class="fi"><img src="images/f6.png" /></span><span class="fh">1,3</span> <span class="fb">GW</span> <span class="fs">łącznej mocy <br />wytwórczej</span></div></div>
-            -->
-				
-            </div>
-            <div class="row">
-               <!-- 
-              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f7.png" /></span><span class="fh">47 </span> <span class="fs">elektrowni <br />wodnych</span></div></div>
-              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f8.png" /></span><span class="fh">89 </span> <span class="fs">turbin wiatrowych <br />na 3 farmach</span></div></div>
-            -->
-              <div class="col-md-12 col-lg-6">
-              <div class="fakt">
-                <div class="icon"><img src="images/f7.png" /></div>
-                  <div class="desc">
-                  <span class="fh">47 </span> <span class="fs desc-text">elektrowni <br />wodnych</span>
+                    sieć dystrybucyjna o długości ponad <span class="fh">193</span> <span class="fb">tys. km</span>
                   </div>         
-               </div> 
-             </div> 
-             
-            <div class="col-md-12 col-lg-6">
-              <div class="fakt">
-                 <div class="icon"><img src="images/f8.png" /></div>
-                 <div class="desc">
-                 <span class="fh">89 </span><span class="desc-text">turbin wiatrowych <br />na 3 farmach</span>
-                </div>         
+                </div> 
+
+                <div class="faktitem fakt trigger" id="tbcf2" data-trigger="faktitem">
+                  <div class="icon"><img src="images/f2.png" /></div>
+                  <div class="desc">
+                   obejmuje powierzchnię <span class="fh">77</span> <span class="fb">tys. km²</span> czyli 25% obszaru Polski
+                  </div>         
+                </div>  
+                
+                <div class="faktitem fakt trigger" id="tbcf3" data-trigger="faktitem">
+                  <div class="icon"><img src="images/f3.png" /></div>
+                  <div class="desc">
+                    ponad <span class="fh">20</span> <span class="fb">TWh</span> energii przesyłanej rocznie**
+                  </div>         
+                </div> 
+                
+                <div class="faktitem fakt trigger" id="tbcf4" data-trigger="faktitem">
+                  <div class="icon"><img src="images/f4.png" /></div>
+                  <div class="desc">
+                   ponad <span class="fh">75%</span> <span class="fb">zysku EBITDA</span>pochodzi z kluczowego dla Grupy segmentu dystrybucji
+                  </div>         
+                </div> 
+                 
+        		 
+        				<div class="text-note">
+        					* dane na dzień 30.09.2013 r., chyba, że wskazano inaczej<br />
+        					** dane na dzień 31.12.2012 r.
+        				</div> 		 
               </div> 
-             </div> 
-             <div class="col-md-12 col-lg-6" style="width: 100% !important;">
-              <div class="fakt">
-                 <div class="icon"><img src="images/f9.png" /></div>
-                 <div class="desc">
-                 <span class="fh">38% </span><span class="desc-text">produkowanej energii pochodzi ze źródeł odnawialnych<span>
-              </div>         
-              </div> 
-             </div> 
-             
-              <div class="col-md-12 col-lg-6" style="width: 100% !important;">
-              <div class="fakt">
-                 <div class="icon"><img src="images/f10.png" /></div>
-                 <div class="desc">
-                 <span class="fh">36% </span> <span class="desc-text">wszystkich źródeł odnawialnych w Polsce jest<br /> przyłączonych do sieci Grupy ENERGA</span>
-              </div>         
-              </div> 
-             </div>             
-             
-			<div class="text-note">
-				* dane na dzień 30.09.2013 r., chyba, że wskazano inaczej<br />
-				** dane na dzień 31.12.2012 r.
-			</div>
-			 
-            <!--
-            <div class="fakt"><span class="fi"><img src="images/f9.png" /></span><span class="fh">38% </span> <span class="fs">produkowanej energii pochodzi ze źródeł odnawialnych</span></div>
-            <div class="fakt"><span class="fi"><img src="images/f10.png" /></span><span class="fh">36% </span> <span class="fs">wszystkich źródeł odnawialnych w Polsce jest <br />przyłączonych do sieci ENERGI</span></div>
-        -->
+
+    			
+    			
+              <ul class="nav visible-xs visible-sm" style="margin-top: 60px;">
+                <li class="active"><a href="#wytwarzanie" data-toggle="tab">Wytwarzanie</a></li>
+              </ul>
+              <div class="tab-pane fade" id="wytwarzanie">
+                <div class="row">
+                  <div class="col-md-12 col-lg-6">
+                    <div class="faktitem fakt">
+                        <div class="icon"><img src="images/f5.png" /></div>
+                        <div class="desc">
+                          <span class="fh">4,1</span> <span class="fb">TWh</span><span class="desc-text">energii <br />produkowanej<br /> rocznie**</span>
+                        </div>         
+                    </div> 
+                  </div>
+                  
+                  <div class="col-md-12 col-lg-6">
+                    <div class="faktitem fakt">
+                      <div class="icon"><img src="images/f6.png" /></div>
+                      <div class="desc">
+                          <span class="fh">1,3</span> <span class="fb">GW</span> <span class="desc-text">łącznej mocy <br />wytwórczej<span>
+                      </div>         
+                    </div> 
+                  </div> 
+                </div>
+                <div class="row">
+
+                  <div class="col-md-12 col-lg-6">
+                    <div class="faktitem fakt">
+                      <div class="icon"><img src="images/f7.png" /></div>
+                      <div class="desc">
+                      <span class="fh">47 </span> <span class="fs desc-text">elektrowni <br />wodnych</span>
+                      </div>         
+                    </div> 
+                  </div> 
+                 
+                  <div class="col-md-12 col-lg-6">
+                    <div class="faktitem fakt">
+                        <div class="icon"><img src="images/f8.png" /></div>
+                        <div class="desc">
+                          <span class="fh">89 </span><span class="desc-text">turbin wiatrowych <br />na 3 farmach</span>
+                        </div>         
+                    </div> 
+                  </div> 
+
+                   <div class="col-md-12 col-lg-6" style="width: 100% !important;">
+                    <div class="faktitem fakt">
+                        <div class="icon"><img src="images/f9.png" /></div>
+                        <div class="desc">
+                           <span class="fh">38% </span><span class="desc-text">produkowanej energii pochodzi ze źródeł odnawialnych<span>
+                        </div>         
+                    </div> 
+                   </div> 
+                   
+                    <div class="col-md-12 col-lg-6" style="width: 100% !important;">
+                    <div class="faktitem fakt">
+                        <div class="icon"><img src="images/f10.png" /></div>
+                        <div class="desc">
+                           <span class="fh">36% </span> <span class="desc-text">wszystkich źródeł odnawialnych w Polsce jest<br /> przyłączonych do sieci Grupy ENERGA</span>
+                        </div>         
+                    </div> 
+                   </div>             
+                 
+            			<div class="text-note">
+            				* dane na dzień 30.09.2013 r., chyba, że wskazano inaczej<br />
+            				** dane na dzień 31.12.2012 r.
+            			</div>
+                </div>
+    		      </div>
+
+              <ul class="nav visible-xs visible-sm" style="margin-top: 60px;">
+                <li class="active"><a href="#sprzedaż" data-toggle="tab" class="last">Sprzedaż</a></li>
+              </ul>
+              <div class="tab-pane fade" id="sprzedaż">
+                <div class="row">
+                  <div class="col-md-12 col-lg-6">
+                    <div class="faktitem fakt">
+                        <div class="icon"><img src="images/f11.png" /></div>
+                        <div class="desc">
+                            <span class="fh">2,9</span> <span class="fb">mln</span><span class="desc-text">Klientów</span>
+                        </div>         
+                    </div> 
+                  </div>    
+                  <div class="col-md-12 col-lg-6">
+                    <div class="faktitem fakt">
+                        <div class="icon"><img src="images/f12.png" /></div>
+                        <div class="desc">
+                					<span class="fh">25 </span><span class="desc-text">nowoczesnych <br />Biur Obsługi Klienta</span>
+                				</div>         
+                    </div> 
+                  </div>
+                </div>
+       
+                <div class="row">
+                
+                  <div class="col-sm-12 col-md-6">
+                    <div class="faktitem fakt">
+                        <span class="fi"><img src="images/f13.png" /></span>
+      				          <span class="fs highest-quality">Najwyższa jakość obsługi Klienta**</span>   
+                    </div> 
+                    
+                  </div>   
+                  <div class="col-sm-12 col-md-6">
+                    <div class="faktitem fakt">
+                      <div id="przyjazna">**FIRMA PRZYJAZNA KLIENTOWI wyróżnienie dla <br>ENERGA Obsługa i Sprzedaż otrzymane w 2012 r.</div>
+                    </div>
+                  </div>  
+               </div>
+         
+               
+                <h2 class="green faktitem fakt">Nowoczesne kanały obsługi Klienta</h2>
+                <div class="row">
+                  <div class="col-md-12 col-lg-6"><div class="faktitem fakt"><span class="fi"><img src="images/f14.png" /></span><span class="fs">elektroniczne Biuro <br>Obsługi Klienta (<span class="green">eBOK</span>)</span></div></div>
+                  <div class="col-md-12 col-lg-6"><div class="faktitem fakt"><span class="fi"><img src="images/f15.png" /></span><span class="fs">mobilne Biuro <br>Obsługi Klienta (<span class="green">meBOK</span>)</span></div></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 col-lg-6"><div class="faktitem fakt"><span class="fi"><img src="images/f16.png" /></span><span class="fs">telefoniczne Biuro <br>Obsługi Klienta (<span class="green">tBOK</span>)</span></div></div>
+                  <div class="col-md-12 col-lg-6"><div class="faktitem fakt"><span class="fi"><img src="images/f17.png" /></span><span class="fs">wirtualne Biuro <br>Obsługi Klienta (<span class="green">wBOK</span>)</span></div></div>
+                </div>
+    			
+    			
+          			<div class="text-note">
+          				* dane na dzień 30.09.2013 r., chyba, że wskazano inaczej<br />
+          			</div>	
+    			
+              </div>
+
         </div>
-			  
-			  
-		  </div>
-
-          <ul class="nav visible-xs visible-sm" style="margin-top: 60px;">
-            <li class="active"><a href="#sprzedaż" data-toggle="tab" class="last">Sprzedaż</a></li>
-          </ul>
-          <div class="tab-pane fade" id="sprzedaż">
-            <div class="row">
-             <div class="col-md-12 col-lg-6">
-              <div class="fakt">
-                 <div class="icon"><img src="images/f11.png" /></div>
-                 <div class="desc">
-                <span class="fh">2,9</span> <span class="fb">mln</span><span class="desc-text">Klientów</span>
-              </div>         
-              </div> 
-             </div>    
-            <div class="col-md-12 col-lg-6">
-              <div class="fakt">
-                 <div class="icon"><img src="images/f12.png" /></div>
-                 <div class="desc">
-					<span class="fh">25 </span><span class="desc-text">nowoczesnych <br />Biur Obsługi Klienta</span>
-				</div>         
-              </div> 
-             </div>
-						 
-              <!--
-              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f11.png" /></span><span class="fh">2,9</span> <span class="fb">mln</span> Klientów</div></div>
-              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f12.png" /></span><span class="fh">25 </span> <span class="fs">nowoczesnych <br />Biur Obsługi Klienta</span></div></div>
-               -->
-            </div>
-   
-            <div class="row">
-            
-               <div class="col-sm-12 col-md-6">
-              <div class="fakt">
-                 <span class="fi"><img src="images/f13.png" /></span>
-				 <span class="fs highest-quality">Najwyższa jakość obsługi Klienta**</span>   
-              </div> 
-              
-             </div>   
-             <div class="col-sm-12 col-md-6">
-             <div id="przyjazna">**FIRMA PRZYJAZNA KLIENTOWI wyróżnienie dla <br>ENERGA Obsługa i Sprzedaż otrzymane w 2012 r.</div>
-             </div>  
-            
-			
-				
-            <!--
-            
-              <div class="col-sm-12 col-md-6"><div class="fakt"><span class="fi"><img src="images/f13.png" /></span><span class="fs">Najwyższa jakość obsługi <br>Klienta<span class="green">*</span></span></div></div>
-              <div class="col-sm-12 col-md-6"><div id="przyjazna">*FIRMA PRZYJAZNA KLIENTOWI wyróżnienie dla <br>ENERGA Obsługa i Sprzedaż otrzymane w 2012 r.</div></div>
-          -->
-
-           </div>
-     
-           
-            <h2 class="green">Nowoczesne kanały obsługi Klienta</h2>
-            <div class="row">
-              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f14.png" /></span><span class="fs">elektroniczne Biuro <br>Obsługi Klienta (<span class="green">eBOK</span>)</span></div></div>
-              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f15.png" /></span><span class="fs">mobilne Biuro <br>Obsługi Klienta (<span class="green">meBOK</span>)</span></div></div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f16.png" /></span><span class="fs">telefoniczne Biuro <br>Obsługi Klienta (<span class="green">tBOK</span>)</span></div></div>
-              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f17.png" /></span><span class="fs">wirtualne Biuro <br>Obsługi Klienta (<span class="green">wBOK</span>)</span></div></div>
-            </div>
-			
-			
-			<div class="text-note">
-				* dane na dzień 30.09.2013 r., chyba, że wskazano inaczej<br />
-				
-			</div>	
-			
-          </div>
-
-    </div>
       </div>
-
-        </div>
+    </div>
       </div>
         <div class="next"></div>
       </div>
@@ -702,19 +669,20 @@ inne spółki.</p>
 
 
         <!-- Tab panes -->
-        <div class="tab-content trigger" id="tbc2" data-trigger="tabcontent">
+        <div class="tab-content" id="tbc2">
           <ul class="nav visible-xs visible-sm">
             <li class="active"><a href="#rozwoj-dystrybucji" data-toggle="tab">Dystrybucja</a></li>
           </ul>
           <div class="tab-pane fade in active" id="rozwoj-dystrybucji">
             <div class="row">
               <div class="col-md-12 col-lg-6">
-                <div class="fakt"><span class="fi"><img src="images/roz1.jpg" /></span><span class="ns big">Modernizacja i rozbudowa<br> sieci dystrybucyjnej</span></div>
-                <div class="fakt"><span class="fi"><img src="images/roz2.jpg" /></span><span class="ns big">Koncentracja<br> na jakości i niezawodności usług</span></div>
-                <div class="fakt"><span class="fi"><img src="images/roz3.jpg" /></span><span class="ns big">Przyłączanie<br> nowych klientów</span></div>
-                <div class="fakt"><span class="fi"><img src="images/roz4.jpg" /></span><span class="ns big">Wzrost<br> efektywności operacyjnej</span></div>
+                <div class="faktitem fakt trigger" id="tbcf11" data-trigger="faktitem"><span class="fi"><img src="images/roz1.jpg" /></span><span class="ns big">Modernizacja i rozbudowa<br> sieci dystrybucyjnej</span></div>
+                <div class="faktitem fakt trigger" id="tbcf12" data-trigger="faktitem"><span class="fi"><img src="images/roz2.jpg" /></span><span class="ns big">Koncentracja<br> na jakości i niezawodności usług</span></div>
+                <div id="rzd1" class="trigger" data-trigger="rozcenterdiv"></div>
+                <div class="faktitem fakt trigger" id="tbcf13" data-trigger="faktitem"><span class="fi"><img src="images/roz3.jpg" /></span><span class="ns big">Przyłączanie<br> nowych klientów</span></div>
+                <div class="faktitem fakt trigger" id="tbcf14" data-trigger="faktitem"><span class="fi"><img src="images/roz4.jpg" /></span><span class="ns big">Wzrost<br> efektywności operacyjnej</span></div>
               </div>
-              <div class="col-md-12 col-lg-6 roz-center-div">
+              <div id="rzd1show" class="col-md-12 col-lg-6 roz-center-div">
                 <div class="roz-center"><img src="images/roz5.jpg" /></div>
                 <div class="roz-center big">Nakłady inwestycyjne<br> przeznaczone na podnoszenie<br> efektywności w obszarze dystrybucji<br> energii to ok.</div>
                 <div class="roz-center"><span class="fh">12,5</span><span class="fb">mld zł</span></div>
@@ -753,9 +721,9 @@ inne spółki.</p>
           </ul>
           
           <div class="tab-pane fade" id="koncentracja">
-            <div class="fakt"><span class="fi"><img src="images/konc1.jpg" /></span><span class="ns big">Najwyższa jakość i niezawodność usług</span></div>
-            <div class="fakt"><span class="fi"><img src="images/konc2.jpg" /></span><span class="ns big">Podnoszenie standardów obsługi Klienta</span></div>
-            <div class="fakt"><span class="fi"><img src="images/konc3.jpg" /></span><span class="ns big">Nowoczesne rozwiązania</span></div>
+            <div class="faktitem fakt"><span class="fi"><img src="images/konc1.jpg" /></span><span class="ns big">Najwyższa jakość i niezawodność usług</span></div>
+            <div class="faktitem fakt"><span class="fi"><img src="images/konc2.jpg" /></span><span class="ns big">Podnoszenie standardów obsługi Klienta</span></div>
+            <div class="faktitem fakt"><span class="fi"><img src="images/konc3.jpg" /></span><span class="ns big">Nowoczesne rozwiązania</span></div>
           </div>
 
         </div>
@@ -795,10 +763,10 @@ inne spółki.</p>
           <div class="title-spacer"></div>
         </div>
         
-        <div class="fakto trigger" data-trigger="fakto" id="fakto00"><img src="images/dot.png" alt="" ><div class="fakto-text">Oferta publiczna obejmuje sprzedaż do<span class="fh">141 522 067</span> akcji serii AA ENERGA SA*</div></div>
-        <div class="fakto trigger" data-trigger="fakto" id="fakto01"><img src="images/dot.png" alt="" ><div class="fakto-text">Inwestorzy Indywidualni – do<span class="fh">15%</span>akcji oferowanych z możliwością zwiększenia puli, jeden zapis na maksymalnie<span class="fh">1 500</span>akcji</div></div>
-        <div class="fakto trigger" data-trigger="fakto" id="fakto02"><img src="images/dot.png" alt="" ><div class="fakto-text">Duzi Inwestorzy Indywidualni – do<span class="fh">7 076 103</span>akcji oferowanych z możliwością zwiększenia puli, jeden zapis na maksymalnie<span class="fh">6 000</span>akcji</div></div>
-        <div class="fakto trigger" data-trigger="fakto" id="fakto04"><img src="images/dot.png" alt="" ><div class="fakto-text">Cena maksymalna<span class="fh">20</span><span class="fb">zł</span></div></div>
+        <div class="fakto trigger" data-trigger="fakto" id="fakto00"><img src="images/dot.png" alt="" ><div class="fakto-text"><span>Oferta publiczna obejmuje sprzedaż do</span><span class="fh">141 522 067</span> <span>akcji serii AA ENERGA SA*</span></div></div>
+        <div class="fakto trigger" data-trigger="fakto" id="fakto01"><img src="images/dot.png" alt="" ><div class="fakto-text"><span>Inwestorzy Indywidualni – do</span><span class="fh">15%</span><span>akcji oferowanych z możliwością zwiększenia puli, jeden zapis na maksymalnie</span><span class="fh">1 500</span><span>akcji</span></div></div>
+        <div class="fakto trigger" data-trigger="fakto" id="fakto02"><img src="images/dot.png" alt="" ><div class="fakto-text"><span>Duzi Inwestorzy Indywidualni – do</span><span class="fh">7 076 103</span><span>akcji oferowanych z możliwością zwiększenia puli, jeden zapis na maksymalnie</span><span class="fh">6 000</span><span>akcji</span></div></div>
+        <div class="fakto trigger" data-trigger="fakto" id="fakto04"><img src="images/dot.png" alt="" ><div class="fakto-text"><span>Cena maksymalna</span><span class="fh">20</span><span class="fb">zł</span></div></div>
         
 		<div class="text-note">
 			* Ostateczna liczba Akcji Oferowanych w ramach Oferty wraz z Liczbą Akcji Stabilizujących, która łącznie nie przekroczy 141.522.067 akcji zwykłych na okaziciela serii AA Spółki. 
@@ -850,18 +818,21 @@ inne spółki.</p>
  
     <div id="harmonogram-wrapper">
       <div id="harmonogram" class="container">
+
+
         <div id="t5" class="title trigger" data-trigger="title">
           <h2>Harmonogram oferty</h2>
           <div class="title-spacer"></div>
         </div>
+        <div id="calendar-items" class="trigger" data-trigger="calendaritems"></div>
         <div class="cal hidden-xs">
           <p class="big">Listopad 2013</p>
           <div class="days clearfix">
-            <div id="ci1" class="cal-info" data-center-top="opacity: 0;" data-center-bottom="opacity: 1;">Zapisy dla <br />Inwestorów Indywidualnych</div>
-            <div class="d"></div>
-            <div class="d"></div>
-            <div class="d"></div>
-            <div class="d"></div>
+            <div id="ci1" class="cal-info">Zapisy dla <br />Inwestorów Indywidualnych</div>
+            <div class="d dt"></div>
+            <div class="d dt"></div>
+            <div class="d dt"></div>
+            <div class="d dt"></div>
             <div class="d">1</div>
             <div class="d">2</div>
             <div class="d">3</div>
@@ -892,19 +863,19 @@ inne spółki.</p>
             <div class="d a">28</div>
             <div class="d a">29</div>
             <div class="d a">30</div>
-            <div class="d"></div>
+            <div class="d dt"></div>
           </div>
         </div>
         <div class="cal hidden-xs">
           <p class="big">Grudzień 2013</p>
           <div class="days clearfix">
-            <div id="ci2" class="cal-info" data-center-top="opacity: 0;" data-center-bottom="opacity: 1;">Przewidywana <br>data debiutu**</div>
-            <div class="d"></div>
-            <div class="d"></div>
-            <div class="d"></div>
-            <div class="d"></div>
-            <div class="d"></div>
-            <div class="d"></div>
+            <div id="ci2" class="cal-info">Przewidywana <br>data debiutu**</div>
+            <div class="d dt"></div>
+            <div class="d dt"></div>
+            <div class="d dt"></div>
+            <div class="d dt"></div>
+            <div class="d dt"></div>
+            <div class="d dt"></div>
             <div class="d a">1</div>
             <div class="d a">2</div>
             <div class="d">3</div>
@@ -936,11 +907,11 @@ inne spółki.</p>
             <div class="d">29</div>
             <div class="d">30</div>
             <div class="d">31</div>
-            <div class="d"></div>
-            <div class="d"></div>
-            <div class="d"></div>
-            <div class="d"></div>
-            <div class="d"></div>
+            <div class="d dt"></div>
+            <div class="d dt"></div>
+            <div class="d dt"></div>
+            <div class="d dt"></div>
+            <div class="d dt"></div>
           </div>
         </div>
         
@@ -967,7 +938,7 @@ inne spółki.</p>
         <div class="film-container">
           <img src="images/RamkaFilm.jpg" alt="" />
           <a class="playimg" href="http://www.youtube.com/watch?v=22RW6CUUfks"></a>
-		  <a class="playimg" href="http://www.youtube.com/watch?v=JENnNTJ6UHE"></a>
+		      <a class="playimg" href="http://www.youtube.com/watch?v=JENnNTJ6UHE"></a>
         </div>
       </div>
     </div>

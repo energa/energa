@@ -230,7 +230,18 @@ p {
 	
   }
 }
-
+.fakt.faktitem {
+  margin-bottom: 30px;
+}
+.faktitem,
+.faktitem .desc {
+  opacity: 0;
+  margin-left: -20px;
+}
+.roz-center-div {
+  opacity: 0;
+  margin-left: -30px;
+}
 .fakt {
   margin-bottom: 70px;
   .fi {
@@ -261,8 +272,13 @@ p {
 .fakto {
  display: table;
   margin-bottom: 40px;
-  padding-left: 120px;
-  opacity: 0;
+  img {
+    opacity: 0;
+  }
+  span {
+    padding-left: 30px;
+    opacity: 0;
+  }
   .fi {
 //    display: table-cell;
     vertical-align: bottom;
@@ -358,7 +374,7 @@ body {
     width: 197px;
     height: 196px;
     position: absolute;
-    top: 418px;
+    top: 385px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -749,13 +765,16 @@ body {
           font-weight:bold; 
           float: left;
           &.a {
-            background-color: #ff8c40;
-            color: #fff;
+/*            background-color: #ff8c40;
+            color: #fff;*/
           }
           @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
             width: 90px;
             height: 90px;
           }
+        }
+        .dt {
+          background-color: #FF861E;
         }
         .cal-info {
           position: absolute;
@@ -772,12 +791,12 @@ body {
             height: 9px;
             position: absolute;
             bottom: -9px;
-            right: 40px;
+            right: 125px;
           }
         }
         #ci1 {
-          top: 120px;
-          left: 250px;
+          top: 227px;
+          left: 6px;
           @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
             top: 100px;
             left: 210px;
@@ -785,7 +804,7 @@ body {
         }
         #ci2 {
           top: 130px;
-          left: 130px;
+          left: 246px;
           @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
             top: 0;
             left: 84px;
@@ -1039,7 +1058,7 @@ body {
 
 .slideshow-nav a {
   position: absolute;
-  bottom: 50%;
+  bottom: 46%;
   width: 88px;
   height: 87px;
   display: block;
@@ -1112,8 +1131,8 @@ ul.nav {
 }
 
 .tab-content {
-  opacity: 0;
-  margin-left: 120px;
+/*  opacity: 0;
+  margin-left: 120px;*/
   .tab-pane {
     display: none;
     &.active {

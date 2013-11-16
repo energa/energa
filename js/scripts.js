@@ -38,7 +38,7 @@
 			new Chart(ctx).Pie(pieChartData2, chartSettings);
 		};
     $('#countdown').countdown({
-      until: new Date(2013, 10, 26),
+      until: new Date(2013, 12-1, 2, 23, 59),
       timezone: +60,
       format: 'DHMS',
       layout: '<div><label>Dni</label><span>{dnn}</span></div>' + 
@@ -74,11 +74,30 @@
 		});
     
     
-//    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-//        console.log(e.target);
-//      e.target.css('margin-left', '30px');
-//      e.relatedTarget // previous tab
-//    })
+   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      if(typeof $(this).data('open') === 'undefined') {
+
+
+        $(this).data('open',true);
+        var counter = 0;
+        $($(this).attr('href')).find('.faktitem.fakt').each(function(){
+          var self = $(this);
+            setTimeout(function(){
+
+              self.animate({opacity: 1, marginLeft: 0}, 500, function(){
+                $(this).find('.desc, .ns').animate({opacity: 1, marginLeft: 0}, 300);
+              });
+
+            }, counter);
+
+            counter += 300;
+        });
+
+
+      }
+
+
+   })
     
 
 

@@ -140,9 +140,31 @@ function trigger_charts($self) {
 }
 
 function trigger_fakto($self) {
-  $self.animate({opacity:1, paddingLeft:0}, 500, function () {
-    $('.fh', this).animate({opacity:1}, 300);
+  var counter = 0;
+  $self.find('img').animate({opacity: 1}, 300);
+  $self.find('span').each(function(){
+    var $item = $(this);
+      setTimeout(function(){
+        $item.animate({opacity: 1, paddingLeft: 0}, 300);
+      }, counter);
+
+      counter += 300;
   });
+}
+
+function trigger_calendaritems($self) {
+  var counter = 0;
+
+  $self.parent().find('#ci1').animate({ opacity: 1 }, 500);
+  $self.parent().find('.d.a').each(function(){
+    var $item = $(this);
+      setTimeout(function(){
+        $item.animate({ backgroundColor: '#ff8c40', color: '#fff'}, 100);
+      }, counter);
+
+      counter += 50;
+  });
+  $self.parent().find('#ci2').animate({ opacity: 1 }, 500);
 }
 
 function trigger_mapa($self) {
@@ -164,8 +186,6 @@ function trigger_wizja($self) {
   });
 }
 
-
-
 function trigger_title($self) {
   $self.find('h2').animate({ opacity: 1, marginLeft: 0 }, 300, function() {
     $(this).parent().find('.title-spacer').animate({ width: '100%', opacity: 1 }, 700);
@@ -183,11 +203,14 @@ function trigger_slideleft($self) {
 function trigger_slideright($self) {
   $self.animate({ opacity: 1, left: 0 }, 300);
 }
-
-function trigger_tabcontent($self) {
-  $self.animate({opacity: 1, marginLeft: 0}, 500);
+function trigger_rozcenterdiv($self) {
+  $('#rzd1show').animate({ opacity: 1, marginLeft: 0 }, 300);
 }
-
+function trigger_faktitem($self) {
+  $self.animate({opacity: 1, marginLeft: 0}, 500, function(){
+    $(this).find('.desc, .ns').animate({opacity: 1, marginLeft: 0}, 300);
+  });
+}
 
 $(function() {
 

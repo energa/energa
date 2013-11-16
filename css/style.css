@@ -181,6 +181,18 @@ p {
   font-size: 1.1em;
   opacity: 0;
 }
+.fakt.faktitem {
+  margin-bottom: 30px;
+}
+.faktitem,
+.faktitem .desc {
+  opacity: 0;
+  margin-left: -20px;
+}
+.roz-center-div {
+  opacity: 0;
+  margin-left: -30px;
+}
 .fakt {
   margin-bottom: 70px;
 }
@@ -211,7 +223,12 @@ p {
 .fakto {
   display: table;
   margin-bottom: 40px;
-  padding-left: 120px;
+}
+.fakto img {
+  opacity: 0;
+}
+.fakto span {
+  padding-left: 30px;
   opacity: 0;
 }
 .fakto .fi {
@@ -306,7 +323,7 @@ body {
   width: 197px;
   height: 196px;
   position: absolute;
-  top: 418px;
+  top: 385px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -701,14 +718,18 @@ body {
   float: left;
 }
 #harmonogram-wrapper #harmonogram .cal .days .d.a {
-  background-color: #ff8c40;
-  color: #fff;
+  /*            background-color: #ff8c40;
+            color: #fff;*/
+
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #harmonogram-wrapper #harmonogram .cal .days .d {
     width: 90px;
     height: 90px;
   }
+}
+#harmonogram-wrapper #harmonogram .cal .days .dt {
+  background-color: #FF861E;
 }
 #harmonogram-wrapper #harmonogram .cal .days .cal-info {
   position: absolute;
@@ -727,11 +748,11 @@ body {
   height: 9px;
   position: absolute;
   bottom: -9px;
-  right: 40px;
+  right: 125px;
 }
 #harmonogram-wrapper #harmonogram .cal .days #ci1 {
-  top: 120px;
-  left: 250px;
+  top: 227px;
+  left: 6px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #harmonogram-wrapper #harmonogram .cal .days #ci1 {
@@ -741,7 +762,7 @@ body {
 }
 #harmonogram-wrapper #harmonogram .cal .days #ci2 {
   top: 130px;
-  left: 130px;
+  left: 246px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #harmonogram-wrapper #harmonogram .cal .days #ci2 {
@@ -986,7 +1007,7 @@ body {
 }
 .slideshow-nav a {
   position: absolute;
-  bottom: 50%;
+  bottom: 46%;
   width: 88px;
   height: 87px;
   display: block;
@@ -1061,8 +1082,9 @@ ul.nav li.active a:after {
   background: transparent url(../images/tab-nav-bottom-active.png) no-repeat 0 0;
 }
 .tab-content {
-  opacity: 0;
-  margin-left: 120px;
+  /*  opacity: 0;
+  margin-left: 120px;*/
+
 }
 .tab-content .tab-pane {
   display: none;
@@ -1441,8 +1463,8 @@ img.mfp-img {
 }
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
   /**
-       * Remove all paddings around the image on small screen
-       */
+         * Remove all paddings around the image on small screen
+         */
   .mfp-img-mobile .mfp-image-holder {
     padding-left: 0;
     padding-right: 0;
