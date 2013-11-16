@@ -125,6 +125,7 @@ p {
   height: 10px;
   margin-bottom: 40px;
   opacity: 0;
+  width: 0%;
 }
 .info {
   display: table;

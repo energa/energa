@@ -36,81 +36,20 @@ function runAniChart($chart, speed) {
                   var $self2 = $(this);
                   $('.okr', $self2).animate({opacity: 1}, speed, function() {
                     $('.sum', $self2).animate({opacity: 1}, speed, function() {
-                      $arrow.animate({opacity: 1}, speed, function() {
-                        if ($next[0]) {
-                          runAniChart($next, speed);
-                        }
-                        else {
+                      $arrow.animate({opacity: 1}, speed, function(){
+                        if(parseInt($('#chart-container-3 div').css('opacity'),10) > 0){
                           $('#schart-p').animate({opacity: 1}, speed * 3);
-                        };
+                        }
                       });
                     });
                   });
                 });
             });
           });
-//          $('.sum', $(this)).animate({
-//              opacity: 1
-//            }, 
-//            speed, function() {
-//              $bar2.animate({
-//                  height: bar1H + 'px', 
-//                  opacity: 1
-//                }, 
-//                speed, 
-//                function() {
-//                  $('span', $(this)).animate({
-//                      opacity: 1
-//                    }, 
-//                    speed, function() {
-//                      $arrow.animate({opacity: 1}, speed, function() {
-//                      
-//                        if ($next[0]) {
-//                          runAniChart($next, speed);
-//                        }
-//                        else {
-//                          $('#schart-p').animate({opacity: 1}, speed);
-//                        };
-//                        
-//                      });
-//                    });
-//                });
-//            });
         });
   
   });   
       
-      
-//  $chart.animate({opacity: 1}, speed, function() {
-//    $bar1.animate({
-//      height: bar1H + 'px', 
-//      opacity: 1
-//    }, 
-//    speed, 
-//    function() {
-//      $('span', $(this)).animate({opacity: 1}, speed);
-//    });
-//    $bar2.animate({
-//      height: bar2H + 'px', 
-//      opacity: 1
-//    }, 
-//    speed, 
-//    function() {
-//      $('.okr', $(this)).animate({opacity: 1}, speed);
-//      $('.sum', $(this)).animate({opacity: 1}, speed, function() {
-//        $chartTitle.animate({opacity: 1, left: 0}, speed, function() {
-//          $arrow.animate({opacity: 1}, speed, function() {
-//            if ($next[0]) {
-//              runAniChart($next, speed);
-//            }
-//            else {
-//              $('#schart-p').animate({opacity: 1}, speed);
-//            };
-//          });
-//        });
-//      });
-//    });
-//  }); 
 }
 function counter($self) {
   var from = {property: 0};
@@ -128,12 +67,13 @@ function trigger_counterrp($self) {
   $self.find('.rp-counter').reverse().each(function (index, item) {
     var $counter = $(item).find('.counter');
 
-    $(item).find('label').delay(2000*index).animate({ opacity: 1 }, 300, function() {
-      $(this).parent().find('.cake').animate({ opacity: 1 }, 300, function() {
-        counter($counter);
-        $(this).parent().find('.counter').animate({ opacity: 1 }, 300);
-        $(this).parent().find('.raisin').animate({ opacity: 1 }, 300);
-      });
+    $(item).find('label').delay(1000*index).animate({ opacity: 1 }, 300, function() {
+
+    });
+    $(item).find('.cake').delay(1000*index).animate({ opacity: 1 }, 300, function() {
+      counter($counter);
+      $(this).parent().find('.counter').animate({ opacity: 1 }, 300);
+      $(this).parent().find('.raisin').animate({ opacity: 1 }, 300);
     });
   });
 }
@@ -195,7 +135,8 @@ function trigger_navtabs($self) {
   $self.animate({opacity:1, marginLeft:0}, 300);
 }
 function trigger_charts($self) {
-  runAniChart($('.schart').first(), 200);
+  runAniChart($self.find('.schart').first(), 200);
+  runAniChart($self.find('.schart').last(), 200);
 }
 
 function trigger_fakto($self) {
@@ -227,7 +168,7 @@ function trigger_wizja($self) {
 
 function trigger_title($self) {
   $self.find('h2').animate({ opacity: 1, marginLeft: 0 }, 300, function() {
-    $(this).parent().find('.title-spacer').animate({ opacity: 1 }, 200);
+    $(this).parent().find('.title-spacer').animate({ width: '100%', opacity: 1 }, 700);
   });
 }
 
