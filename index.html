@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Energa</title>
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen" />
+    <link href="css/fonts.css" rel="stylesheet" media="screen" />
+    <link href="css/style.css" rel="stylesheet" media="screen" />
+    <!--<link rel="stylesheet/less" type="text/css" href="less/style.less"/>-->
+    <link href="css/skrollr.css" rel="stylesheet" media="screen" data-skrollr-stylesheet />
+    <script src="js/jquery10.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.cycle2.min.js"></script>
+    <script src="js/tab.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/inview.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/less.js"></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body id="skrollr-body">
+
+    <div id="intro-wrapper">
+      <div id="intro" class="container">
+        <a id="logo" class="hidden-xs" href="http://www.energa.pl"><img src="images/logo.png" alt="energa" /></a>
+        <h1>Wejdź na giełdę <br />z ENERGĄ</h1>
+        <div class="do-konca">Do końca zapisów pozostało:</div>
+        <div id="countdown"></div>
+      </div>
+    </div>
+
+    <div id="zapisy-wrapper">
+      <div id="zapisy" class="container">
+        <p class="big">Zapisy na akcje w <b>Punktach Obsługi Klienta</b> <br />domów maklerskich tylko do <b>25.11.2013 r.</b></p>
+        <a class="wiecej" href="#">więcej informacji >></a>
+        <br/>  <br/>
+        <p class="small">Podany termin dotyczy również zapisów dla Dużych Inwestorów Indywidualnych <br/>
+        o ile nie zakończą się wcześniej zgodnie z zasadami wskazanymi w prospekcie
+        </p>
+        
+        
+        <div class="next"></div>
+      </div>
+    </div>
+
+    <div id="dzis-wrapper">
+      <div id="dzis" class="container">
+        <div id="t1" class="title trigger" data-trigger="title">
+          <h2>ENERGA dziś*</h2>
+          <div class="title-spacer"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8">
+            <p id="p1" class="op0 big trigger" data-trigger="show">Najbardziej nowoczesny dystrybutor energii elektrycznej w Polsce</p>
+            <div id="i1" class="info trigger" data-trigger="info">
+              <div class="icon"></div>
+              <div class="count">17%</div>
+              <div class="desc">udział w sprzedaży energii <br/>w Polsce</div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div id="mapa" class="trigger" data-trigger="mapa">
+              <img id="mapa-bg" src="images/mapa.png" />
+              <div id="mi1" class="mi"><img src="images/mi1.png" /></div>
+              <div id="mi2" class="mi"><img src="images/mi2.png" /></div>
+              <div id="mi3" class="mi"><img src="images/mi3.png" /></div>
+              <div id="mi4" class="mi"><img src="images/mi4.png" /></div>
+            </div>
+          </div>
+        </div>
+        <div id="first" class="row">
+          <div class="col-md-6">
+            <div id="i2" class="info trigger" data-trigger="info">
+              <div class="icon"><img src="images/info1.png" /></div>
+              <div class="count">57</div>
+              <div class="desc">obiektów <br/>wytwórczych</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div id="i3" class="info trigger" data-trigger="info2">
+              <div class="icon"><img src="images/info2.png" /></div>
+              <div class="count">1,3<span style="font-size: .3em;">GW</span></div>
+              <div class="desc">mocy <br/>wytwórczych</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-lg-8">
+            <div id="i4" class="info trigger" data-trigger="info">
+              <div class="icon"><img src="images/info3.png" /></div>
+              <div class="count">38%</div>
+              <div class="desc">mocy wytwórczych <br>pochodzi z odnawialnych <br>źródeł energii</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-lg-8">
+            <div id="i5" class="info trigger" data-trigger="infopracownicy">
+              <div class="icon"><img src="images/info4.png" /></div>
+              <div id="ponad" class="desc">Ponad&nbsp;&nbsp;</div>
+              <div class="count">10 000</div>
+              <div id="pracownicy" class="desc">pracowników</div>
+            </div>
+          </div>
+          <div id="solidny-pracodawca" class="col-sm-12 col-md-2 col-lg-4">
+            <img src="images/solidny-pracodawca.png" />
+          </div>
+        </div>
+        <p id="dzis-gwiazdka" style="font-size: .7em; padding-top: 40px;" class="op0 trigger" data-trigger="show">* dane na dzień 30.09.2013r.</p>
+        <div class="next"></div>
+      </div>
+    </div>
+
+    <div id="rp-wrapper">
+      <div id="rp" class="container">
+        <p id="rp1" class="trigger" data-trigger="slideleft">ENERGA znajduje się wśród <br />20 największych polskich firm</p>
+        <p id="rp2" class="trigger" data-trigger="slideright">według rankingów Rzeczpospolitej, <br />a jej pozycja potwierdzona jest licznymi nagrodami i wyróżnieniami.</p>
+        <p id="rp3" class="trigger" data-trigger="slideleft">Lista 500</p>
+        <div id="rp-logo" class="trigger" data-trigger="show"><img src="images/logo-rp.png" /></div>
+        <p id="rp4" class="trigger" data-trigger="slideright">miejsce w rankingu:</p>
+        <div class="row">
+          <div id="rp-counters" class="trigger" data-trigger="counterrp">
+            <div id="rpc1" class="rp-counter">
+              <label>2012</label>
+              <div class="cake">
+                <span class="counter" data-stop="13" data-duration="2000">13</span>
+                <span class="raisin">.</span>
+              </div>
+            </div>
+            <div id="rpc2" class="rp-counter">
+              <label>2011</label>
+              <div class="cake">
+                <span class="counter" data-stop="14" data-duration="2000">13</span>
+                <span class="raisin">.</span>
+              </div>
+            </div>
+            <div id="rpc3" class="rp-counter">
+              <label>2010</label>
+              <div class="cake">
+                <span class="counter" data-stop="15" data-duration="2000">13</span>
+                <span class="raisin">.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="next"></div>
+      </div>
+    </div>
+
+    <div id="misja-wrapper">
+      <div id="misja" class="container">
+        <div id="t2" class="title trigger" data-trigger="title">
+          <h2>Misja</h2>
+          <div class="title-spacer"></div>
+        </div>
+        <p id="p2" class="op0 big trigger" data-trigger="show">Poprawiamy komfort życia i pracy naszych Klientów.</p>
+       <br>
+        <div id="t3" class="title trigger" data-trigger="title">
+          <h2>Wizja</h2>
+          <div class="title-spacer"></div>
+        </div>
+        <p id="p3" class="op0 big trigger" data-trigger="show">Efektywna i innowacyjna grupa kapitałowa, elastycznie dostosowująca się do warunków rynkowych, która jest:</p>
+
+        <div class="row">
+          <div id="w1" class="info trigger" data-trigger="wizja">
+            <div class="icon"><img src="images/misja1.png" /></div>
+            <div class="desc">przedsięwzięciem o niskim profilu ryzyka <br />oraz bezpiecznych wskaźnikach finansowych,</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="w2" class="info trigger" data-trigger="wizja">
+            <div class="icon"><img src="images/misja2.png" /></div>
+            <div class="desc">preferowanym i niezawodnym <br />dostawcą energii,</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="w3" class="info trigger" data-trigger="wizja">
+            <div class="icon"><img src="images/misja3.png" /></div>
+            <div class="desc">przyjaznym środowisku i efektywnym <br />producentem energii.</div>
+          </div>
+        </div>
+
+        <div class="next"></div>
+      </div>
+    </div>
+
+    <div id="slideshow-wrapper">
+      <img class="senti" src="images/slide1-1.jpg" alt="" />
+      <ul 
+        class="cycle-slideshow"
+        data-cycle-fx="fadeout"
+        data-cycle-timeout="3000"
+        data-cycle-slides="> li"
+        data-cycle-prev="#prev"
+        data-cycle-next="#next"
+      >
+        <li class="first">
+          <img class="slide-bg" src="images/slide1-1.jpg" alt="" />
+          <div class="container">
+            <div class="content">
+              <div class="title">
+                <h2>Doświadczony<br /> zespół zarządzający</h2>
+                <div class="title-spacer"></div>
+              </div>
+              <p class="subt">Mirosław Bieliński</p>
+              <p>prezes Zarządu ENERGA SA</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img class="slide-bg" src="images/slide1-2.jpg" alt="" />
+          <div class="container">
+            <div class="content">
+              <div class="title">
+                <h2>Doświadczony<br /> zespół zarządzający</h2>
+                <div class="title-spacer"></div>
+              </div>
+              <p class="subt">Roman Szyszko</p>
+              <p>wiceprezes Zarządu ENERGA SA <br />ds. finansowych</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img class="slide-bg" src="images/slide1-3.jpg" alt="" />
+          <div class="container">
+            <div class="content">
+              <div class="title">
+                <h2>Doświadczony<br /> zespół zarządzający</h2>
+                <div class="title-spacer"></div>
+              </div>
+              <p class="subt">Wojciech Topolnicki</p>
+              <p>wiceprezes Zarządu ENERGA SA <br />ds. strategii rozwoju</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="slideshow-overlay">
+        <div class="slideshow-nav">
+          <a href="#" id="prev"></a>
+          <a href="#" id="next"></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="segmenty-wrapper">
+      <div id="segmenty" class="container">
+        <div id="t4" class="title trigger" data-trigger="title">
+          <h2>Kluczowe segmenty biznesowe*</h2>
+          <div class="title-spacer"></div>
+        </div>
+        
+        <ul class="nav nav-tabs hidden-xs hidden-sm trigger" id="ntbs0" data-trigger="navtabs">
+          <li class="active"><a href="#dystrybucja" data-toggle="tab">Dystrybucja</a></li>
+          <li><a href="#wytwarzanie" data-toggle="tab">Wytwarzanie</a></li>
+          <li><a href="#sprzedaż" data-toggle="tab" class="last">Sprzedaż</a></li>
+        </ul>
+
+
+
+        <!-- Tab panes -->
+        <div class="tab-content trigger" id="tbc1" data-trigger="tabcontent">
+          <ul class="nav visible-xs visible-sm">
+            <li class="active"><a href="#dystrybucja" data-toggle="tab">Dystrybucja</a></li>
+          </ul>
+          <div class="tab-pane fade in active" id="dystrybucja">
+
+          
+          <div class="fakt">
+            <div class="icon"><img src="images/f1.png" /></div>
+              <div class="desc">
+                sieć dystrybucyjna o długości ponad <span class="fh">193</span> <span class="fb">tys. km</span>
+              </div>         
+            </div> 
+
+           <div class="fakt">
+            <div class="icon"><img src="images/f2.png" /></div>
+              <div class="desc">
+               obejmuje powierzchnię <span class="fh">77</span> <span class="fb">tys. km²</span> czyli 25% obszaru Polski
+              </div>         
+            </div>  
+            
+            <div class="fakt">
+            <div class="icon"><img src="images/f3.png" /></div>
+              <div class="desc">
+                ponad <span class="fh">20</span> <span class="fb">TWh</span> energii przesyłanej rocznie (dane na 31.12.2012r.)
+              </div>         
+            </div> 
+             <div class="fakt">
+            <div class="icon"><img src="images/f4.png" /></div>
+              <div class="desc">
+               ponad <span class="fh">75%</span> <span class="fb">zysku EBITDA</span>pochodzi z kluczowego dla Grupy segmentu dystrybucji
+              </div>         
+            </div> 
+            
+             </div> 
+        <!--<div class="fakt"><span class="fi"><img src="images/f1.png" /></span>sieć dystrybucyjna o długości ponad <span class="fh">193</span> <span class="fb">tys. km</span></div>
+            <div class="fakt"><span class="fi"><img src="images/f2.png" /></span>obejmuje powierzchnię <span class="fh">77</span> <span class="fb">tys. km²</span> czyli 25% obszaru Polski</div>
+            <div class="fakt"><span class="fi"><img src="images/f3.png" /></span>ponad <span class="fh">20</span> <span class="fb">TWh</span> energii przesyłanej rocznie (dane na 31.12.2012r.)</div>
+            <div class="fakt"><span class="fi"><img src="images/f4.png" /></span>ponad <span class="fh">75%</span> <span class="fb">zysku EBITDA</span> <span class="fs">pochodzi z kluczowego dla <br />Grupy segmentu dystrybucji</span></div> -->
+         
+          <ul class="nav visible-xs visible-sm" style="margin-top: 60px;">
+            <li class="active"><a href="#wytwarzanie" data-toggle="tab">Wytwarzanie</a></li>
+          </ul>
+          <div class="tab-pane fade" id="wytwarzanie">
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+              <!--
+              <div class="fakt"><span class="fi"><img src="images/f5.png" /></span><span class="fh">4,1</span> <span class="fb">TWh</span> <span class="fs">energii <br />produkowanej <br />rocznie</span></div>
+              -->
+                <div class="fakt">
+                    <div class="icon"><img src="images/f5.png" /></div>
+                    <div class="desc">
+                      <span class="fh">4,1</span> <span class="fb">TWh</span> energii produkowanej rocznie
+                    </div>         
+                 </div> 
+              </div>
+              
+              <div class="col-md-12 col-lg-6">
+              <div class="fakt">
+                <div class="icon"><img src="images/f6.png" /></div>
+                  <div class="desc">
+                <span class="fh">1,3</span> <span class="fb">GW</span> łącznej mocy wytwórczej
+              </div>         
+            </div> 
+             </div> 
+               <!-- 
+              <div class="fakt"><span class="fi"><img src="images/f6.png" /></span><span class="fh">1,3</span> <span class="fb">GW</span> <span class="fs">łącznej mocy <br />wytwórczej</span></div></div>
+            -->
+            </div>
+            <div class="row">
+               <!-- 
+              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f7.png" /></span><span class="fh">47 </span> <span class="fs">elektrowni <br />wodnych</span></div></div>
+              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f8.png" /></span><span class="fh">89 </span> <span class="fs">turbin wiatrowych <br />na 3 farmach</span></div></div>
+            -->
+              <div class="col-md-12 col-lg-6">
+              <div class="fakt">
+                <div class="icon"><img src="images/f7.png" /></div>
+                  <div class="desc">
+                  <span class="fh">47 </span> <span class="fs">elektrowni <br />wodnych</span>
+                  </div>         
+               </div> 
+             </div> 
+             
+            <div class="col-md-12 col-lg-6">
+              <div class="fakt">
+                 <div class="icon"><img src="images/f8.png" /></div>
+                 <div class="desc">
+                 <span class="fh">89 </span>turbin wiatrowych <br />na 3 farmach
+                </div>         
+              </div> 
+             </div> 
+             <div class="col-md-12 col-lg-6">
+              <div class="fakt">
+                 <div class="icon"><img src="images/f9.png" /></div>
+                 <div class="desc">
+                 <span class="fh">38% </span>produkowanej energii pochodzi ze źródeł odnawialnych
+              </div>         
+              </div> 
+             </div> 
+             
+              <div class="col-md-12 col-lg-6">
+              <div class="fakt">
+                 <div class="icon"><img src="images/f10.png" /></div>
+                 <div class="desc">
+                 <span class="fh">36% </span> wszystkich źródeł odnawialnych w Polsce jest przyłączonych do sieci ENERGI
+              </div>         
+              </div> 
+             </div>             
+             
+            <!--
+            <div class="fakt"><span class="fi"><img src="images/f9.png" /></span><span class="fh">38% </span> <span class="fs">produkowanej energii pochodzi ze źródeł odnawialnych</span></div>
+            <div class="fakt"><span class="fi"><img src="images/f10.png" /></span><span class="fh">36% </span> <span class="fs">wszystkich źródeł odnawialnych w Polsce jest <br />przyłączonych do sieci ENERGI</span></div>
+        -->
+        </div>
+          </div>
+
+          <ul class="nav visible-xs visible-sm" style="margin-top: 60px;">
+            <li class="active"><a href="#sprzedaż" data-toggle="tab" class="last">Sprzedaż</a></li>
+          </ul>
+          <div class="tab-pane fade" id="sprzedaż">
+            <div class="row">
+             <div class="col-md-12 col-lg-6">
+              <div class="fakt">
+                 <div class="icon"><img src="images/f11.png" /></div>
+                 <div class="desc">
+                <span class="fh">2,9</span> <span class="fb">mln</span> Klientów
+              </div>         
+              </div> 
+             </div>    
+            <div class="col-md-12 col-lg-6">
+              <div class="fakt">
+                 <div class="icon"><img src="images/f12.png" /></div>
+                 <div class="desc">
+               <span class="fh">25 </span>nowoczesnych <br />Biur Obsługi Klienta
+              </div>         
+              </div> 
+             </div>   
+              <!--
+              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f11.png" /></span><span class="fh">2,9</span> <span class="fb">mln</span> Klientów</div></div>
+              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f12.png" /></span><span class="fh">25 </span> <span class="fs">nowoczesnych <br />Biur Obsługi Klienta</span></div></div>
+               -->
+            </div>
+   
+            <div class="row">
+            
+               <div class="col-sm-12 col-md-6">
+              <div class="fakt">
+                 <div class="icon"><img src="images/f13.png" /></div>
+                 <div class="desc">
+          Najwyższa jakość obsługi <br>Klienta<span class="green">*</span>
+              </div>         
+              </div> 
+              
+             </div>   
+             <div class="col-sm-12 col-md-6">
+             <div id="przyjazna">*FIRMA PRZYJAZNA KLIENTOWI wyróżnienie dla <br>ENERGA Obsługa i Sprzedaż otrzymane w 2012 r.</div>
+             </div>  
+            
+            <!--
+            
+              <div class="col-sm-12 col-md-6"><div class="fakt"><span class="fi"><img src="images/f13.png" /></span><span class="fs">Najwyższa jakość obsługi <br>Klienta<span class="green">*</span></span></div></div>
+              <div class="col-sm-12 col-md-6"><div id="przyjazna">*FIRMA PRZYJAZNA KLIENTOWI wyróżnienie dla <br>ENERGA Obsługa i Sprzedaż otrzymane w 2012 r.</div></div>
+          -->
+
+           </div>
+     
+           
+            <h2 class="green">Nowoczesne kanały obsługi Klienta</h2>
+            <div class="row">
+              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f14.png" /></span><span class="fs">elektroniczne Biuro <br>Obsługi Klienta (<span class="green">eBOK</span>)</span></div></div>
+              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f15.png" /></span><span class="fs">mobilne Biuro <br>Obsługi Klienta (<span class="green">meBOK</span>)</span></div></div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f16.png" /></span><span class="fs">telefoniczne Biuro <br>Obsługi Klienta (<span class="green">tBOK</span>)</span></div></div>
+              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f17.png" /></span><span class="fs">wirtualne Biuro <br>Obsługi Klienta (<span class="green">wBOK</span>)</span></div></div>
+            </div>
+          </div>
+
+    </div>
+      </div>
+
+        </div>
+      </div>
+        <div class="next"></div>
+      </div>
+    </div>
+
+
+
+    <div id="wzrost-wrapper">
+      <div id="wzrost" class="container">
+        <div id="t6" class="title trigger" data-trigger="title">
+          <h2>Stabilny wzrost biznesu</h2>
+          <div class="title-spacer"></div>
+        </div>
+        <div id="chart-container-1" class="chart-container trigger" data-trigger="charts">
+          <div class="schart">
+            <div class="chart-title">Przychody</div>
+            <div class="bar1" data-height="130">
+              <span class="sum">8 241,2 mln</span>
+              <span class="okr">3Q 2012</span>
+            </div>
+            <div class="arrow-up">3,6%</div>
+            <div class="bar2" data-height="190">
+              <span class="sum">8 537,5 mln</span>
+              <span class="okr">3Q 2013</span>
+            </div>
+          </div>
+          <div class="schart">
+            <div class="chart-title">EBIDTA*</div>
+            <div class="bar1" data-height="130">
+              <span class="sum">1 332,4 mln</span>
+              <span class="okr">3Q 2012</span>
+            </div>
+            <div class="arrow-up">12,7%</div>
+            <div class="bar2" data-height="190">
+              <span class="sum">1 501,4 mln</span>
+              <span class="okr">3Q 2013</span>
+            </div>
+          </div>
+          <div class="schart">
+            <div class="chart-title">Marża EBIDTA*</div>
+            <div class="bar1" data-height="130">
+              <span class="sum">16,8%</span>
+              <span class="okr">3Q 2012</span>
+            </div>
+            <div class="arrow-up">1,4pp</div>
+            <div class="bar2" data-height="190">
+              <span class="sum">17,6%</span>
+              <span class="okr">3Q 2013</span>
+            </div>
+          </div>
+          <div class="schart">
+            <div class="chart-title">Zysk netto</div>
+            <div class="bar1" data-height="130">
+              <span class="sum">530,2 mln</span>
+              <span class="okr">3Q 2012</span>
+            </div>
+            <div class="arrow-up">12,7%</div>
+            <div class="bar2" data-height="190">
+              <span class="sum">596,6 mln</span>
+              <span class="okr">3Q 2013</span>
+            </div>
+          </div>
+          <div class="schart">
+            <div class="chart-title">Nakłady inwestycyjne</div>
+            <div class="bar1" data-height="130">
+              <span class="sum">1 193 mln</span>
+              <span class="okr">3Q 2012</span>
+            </div>
+            <div class="arrow-up">76%</div>
+            <div class="bar2" data-height="190">
+              <span class="sum">2 104 mln</span>
+              <span class="okr">3Q 2013</span>
+            </div>
+          </div>
+          <div id="schart-p">
+            <p>*ENERGA SA definiuje i oblicza EBITDA jako zysk/(strata) z działalności operacyjnej (obliczony jako zysk/(strata) netto z działalności kontynuowanej za okres/rok obrotowy skorygowany o (i) podatek dochodowy, (ii) udział w zysku jednostki stowarzyszonej, (iii) przychody finansowe, oraz (iv) koszty finansowe) skorygowany o amortyzację (wykazaną w rachunku zysków i strat). EBITDA nie jest zdefiniowana przez MSSF i nie należy jej traktować jako alternatywy dla miar i kategorii zgodnych z MSSF. Ponadto EBITDA nie ma jednolitej definicji. Sposób obliczania EBITDA przez inne spółki może się istotnie różnić od sposobu, w jaki oblicza ją ENERGA SA. W efekcie EBITDA przedstawiona w tym miejscu, jako taka, nie stanowi podstawy dla porównania z EBITDA wykazywaną przez
+inne spółki.</p>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+
+<!--
+    <div id="wzrost-wrapper">
+      <div id="wzrost" class="container">
+        <div id="t6" class="title trigger" data-trigger="title">
+          <h2>Stabilny wzrost biznesu</h2>
+          <div class="title-spacer"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 col-lg-6">
+            <img src="images/wz1.png" />
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <img src="images/wz2.png" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-lg-6">
+            <img src="images/wz3.png" />
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <img src="images/wz4.png" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-lg-6">
+            <img src="images/wz5.png" />
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <p>*ENERGA SA definiuje i oblicza EBITDA jako zysk/(strata) z działalności operacyjnej (obliczony jako zysk/(strata) netto z działalności kontynuowanej za okres/rok obrotowy skorygowany o (i) podatek dochodowy, (ii) udział w zysku jednostki stowarzyszonej, (iii) przychody finansowe, oraz (iv) koszty finansowe) skorygowany o amortyzację (wykazaną w rachunku zysków i strat). EBITDA nie jest zdefiniowana przez MSSF i nie należy jej traktować jako alternatywy dla miar i kategorii zgodnych z MSSF. Ponadto EBITDA nie ma jednolitej definicji. Sposób obliczania EBITDA przez inne spółki może się istotnie różnić od sposobu, w jaki oblicza ją ENERGA SA. W efekcie EBITDA przedstawiona w tym miejscu, jako taka, nie stanowi podstawy dla porównania z EBITDA wykazywaną przez
+inne spółki.</p>
+          </div>
+        </div>
+        <div class="next"></div>
+      </div>
+    </div>
+-->
+    <div id="slideshow2-wrapper">
+      <img class="senti" src="images/slides-2-sailing.png" alt="" />
+      <ul 
+        class="cycle-slideshow"
+        data-cycle-fx="fadeout"
+        data-cycle-timeout="3000"
+        data-cycle-slides="> li"
+        data-cycle-prev="#prev2"
+        data-cycle-next="#next2"
+      >
+        <li class="first">
+          <img class="slide-bg" src="images/slides-2-sailing.png" alt="" />
+          <div class="container">
+            <div class="content">
+              <div class="title">
+                <h2>Odpowiedzialność<br>społeczna<img src="images/CSR.png" class="csr"></h2>
+                <div class="title-spacer"></div>
+              </div>
+              <p class="subt">ENERGA SAILING</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img class="slide-bg" src="images/slides-2-basket.png" alt="" />
+          <div class="container">
+            <div class="content">
+              <div class="title">
+                <h2>Odpowiedzialność<br>społeczna<img src="images/CSR.png" class="csr"></h2>
+                <div class="title-spacer"></div>
+              </div>
+              <p class="subt">ENERGA BASKET CUP</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img class="slide-bg" src="images/slides-2-energa-dla-przyrody.png" alt="" />
+          <div class="container">
+            <div class="content">
+              <div class="title">
+                <h2>Odpowiedzialność<br>społeczna<img src="images/CSR.png" class="csr"></h2>
+                <div class="title-spacer"></div>
+                
+              </div>
+              <p class="subt">ENERGA DLA PRZYRODY</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img class="slide-bg" src="images/slides-2-mecenta.png" alt="" />
+          <div class="container">
+            <div class="content">
+              <div class="title">
+                <h2>Odpowiedzialność<br>Społeczna<img src="images/CSR.png" class="csr"></h2>
+                <div class="title-spacer"></div>
+              </div>
+              <p class="subt">ENERGA MECENAT</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img class="slide-bg" src="images/slides-2-planeta-energii.png" alt="" />
+          <div class="container">
+            <div class="content">
+              <div class="title">
+                <h2>Odpowiedzialność<br>społeczna<img src="images/CSR.png" class="csr"></h2>
+                <div class="title-spacer"></div>
+              </div>
+              <p class="subt">PLANETA ENERGII</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="slideshow-overlay">
+        <div class="slideshow-nav">
+          <a href="#" id="prev2"></a>
+          <a href="#" id="next2"></a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div id="jutro-wrapper">
+      <div id="jutro" class="container">
+        <div id="t8" class="title trigger" data-trigger="title">
+          <h2>ENERGA jutro</h2>
+          <div class="title-spacer"></div>
+          <div id="strategia" class="big trigger" data-trigger="show">Nasza strategia do 2021 r.</div>
+        </div>
+        
+        <ul class="nav nav-tabs hidden-xs hidden-sm trigger" id="ntbs1" data-trigger="navtabs">
+          <li class="active"><a href="#rozwoj-dystrybucji" data-toggle="tab">Rozwój<br>dystrybucji</a></li>
+          <li><a href="#rozwoj-odnawialnych" data-toggle="tab">Rozwój odnawialnych źródeł energii</a></li>
+          <li><a href="#koncentracja" data-toggle="tab" class="last">Koncentracja na obsłudze klienta</a></li>
+        </ul>
+
+
+
+        <!-- Tab panes -->
+        <div class="tab-content trigger" id="tbc2" data-trigger="tabcontent">
+          <ul class="nav visible-xs visible-sm">
+            <li class="active"><a href="#rozwoj-dystrybucji" data-toggle="tab">Dystrybucja</a></li>
+          </ul>
+          <div class="tab-pane fade in active" id="rozwoj-dystrybucji">
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <div class="fakt"><span class="fi"><img src="images/roz1.jpg" /></span><span class="ns big">Modernizacja i rozbudowa<br> sieci dystrybucyjnej</span></div>
+                <div class="fakt"><span class="fi"><img src="images/roz2.jpg" /></span><span class="ns big">Koncentracja<br> na jakości i niezawodności usług</span></div>
+                <div class="fakt"><span class="fi"><img src="images/roz3.jpg" /></span><span class="ns big">Przyłączanie<br> nowych klientów</span></div>
+                <div class="fakt"><span class="fi"><img src="images/roz4.jpg" /></span><span class="ns big">Wzrost<br> efektywności operacyjnej</span></div>
+              </div>
+              <div class="col-md-12 col-lg-6 roz-center-div">
+                <div class="roz-center"><img src="images/roz5.jpg" /></div>
+                <div class="roz-center big">Nakłady inwestycyjne<br> przeznaczone na podnoszenie<br> efektywności w obszarze dystrybucji<br> energii to ok.</div>
+                <div class="roz-center"><span class="fh">12,5</span><span class="fb">mld zł</span></div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="nav visible-xs visible-sm" style="margin-top: 60px;">
+            <li class="active"><a href="#rozwoj-odnawialnych" data-toggle="tab">Wytwarzanie</a></li>
+          </ul>
+          <div class="tab-pane fade" id="rozwoj-odnawialnych">
+            <div class="row">
+              <div class="col-md-12 col-lg-4">
+                <img src="images/Obsl1.jpg" />
+              </div>
+              <div class="col-md-12 col-lg-8">
+                <div class="big">Do 2021 r.</div>
+                <div><span class="fh">ok. 1,7 mld zł</span></div>
+                <div class="big">przeznaczone zostanie na inwestycje<br> w odnawialne źródła energii</div>
+              </div>
+            </div>
+            <!--<div class="row">
+              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f5.png" /></span><span class="fh">4,1</span> <span class="fb">TWh</span> <span class="fs">energii <br />produkowanej <br />rocznie</span></div></div>
+              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f6.png" /></span><span class="fh">1,3</span> <span class="fb">GW</span> <span class="fs">łącznej mocy <br />wytwórczej</span></div></div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f7.png" /></span><span class="fh">47 </span> <span class="fs">elektrowni <br />wodnych</span></div></div>
+              <div class="col-md-12 col-lg-6"><div class="fakt"><span class="fi"><img src="images/f8.png" /></span><span class="fh">89 </span> <span class="fs">turbin wiatrowych <br />na 3 farmach</span></div></div>
+            </div>
+            <div class="fakt"><span class="fi"><img src="images/f9.png" /></span><span class="fh">38% </span> <span class="fs">produkowanej energii pochodzi ze źródeł odnawialnych</span></div>
+            <div class="fakt"><span class="fi"><img src="images/f10.png" /></span><span class="fh">36% </span> <span class="fs">wszystkich źródeł odnawialnych w Polsce jest <br />przyłączonych do sieci ENERGI</span></div>-->
+          </div>
+
+          <ul class="nav visible-xs visible-sm" style="margin-top: 60px;">
+            <li class="active"><a href="#koncentracja" data-toggle="tab" class="last">Sprzedaż</a></li>
+          </ul>
+          
+          <div class="tab-pane fade" id="koncentracja">
+            <div class="fakt"><span class="fi"><img src="images/konc1.jpg" /></span><span class="ns big">Najwyższa jakość i niezawodność usług</span></div>
+            <div class="fakt"><span class="fi"><img src="images/konc2.jpg" /></span><span class="ns big">Podnoszenie standardów obsługi Klienta</span></div>
+            <div class="fakt"><span class="fi"><img src="images/konc3.jpg" /></span><span class="ns big">Nowoczesne rozwiązania</span></div>
+          </div>
+
+        </div>
+        <div class="next"></div>
+      </div>
+    </div>
+
+
+
+
+    <div id="wczoraj-wrapper">
+          <div id="wczoraj" class="container">
+            <div id="t9" class="title trigger" data-trigger="title">
+              <h2>ENERGA wczoraj, dziś,  jutro</h2>
+              <div class="title-spacer"></div>
+            </div>
+            <div class="wczoraj-slide">
+              <div data-top="opacity:1;left:10%;top:5px;" data-900-top="opacity:0;left:8%;top:0;" style="font-size: 1.8em;">Efektywność</div>
+              <div data-top="opacity:.9;right:29%;" data-350-top="opacity:0;right:25%;" style="top: 15%; font-size: 2em;">Elastyczność</div>
+              <div data-top="opacity:1;right:10%;" data-500-top="opacity:0;right:3%;" style="top: 35%; font-size: 1.1em;">Ekologia</div>
+              <div data-top="opacity:1;left:25%;" data-700-top="opacity:0;left:20%;" style="top: 45%; font-size: 2.8em;">Niezawodność</div>
+              <div data-top="opacity:1;left:0;" data-1000-top="opacity:0;left:6%;" style="top: 70%; font-size: 1.6em;">Bezpieczeństwo</div>
+              <div data-top="opacity:1;right:10%;" data-600-top="opacity:0;right:7%;" style="top: 80%; font-size: 1.3em;">Stabilność</div>
+              <div data-top="opacity:1;left:40%;" data-800-top="opacity:0;left:30%;" style="top: 90%; font-size: 2.2em;">Innowacyjność</div>
+            </div>
+            <div class="next"></div>
+          </div>
+        </div>
+
+
+
+
+    <div id="oferta-wrapper">
+      <div id="oferta" class="container">
+        <div id="t7" class="title trigger" data-trigger="title">
+          <h2>Informacje o ofercie</h2>
+          <div class="title-spacer"></div>
+        </div>
+        
+        <div class="fakto trigger" data-trigger="fakto" id="fakto00"><img src="images/dot.png" alt="" style="margin-right: 20px;">Oferta publiczna obejmuje sprzedaż do<span class="fh">141 522 067</span> <br/>akcji ENERGA SA</div>
+        <div class="fakto trigger" data-trigger="fakto" id="fakto01"><img src="images/dot.png" alt="" style="margin-right: 20px;">Inwestorzy Indywidualni – do<span class="fh">15%</span>akcji oferowanych z możliwością zwiększenia puli, jeden zapis na maksymalnie<span class="fh">1 500</span>akcji</div>
+        <div class="fakto trigger" data-trigger="fakto" id="fakto02"><img src="images/dot.png" alt="" style="margin-right: 20px;">Duzi Inwestorzy Indywidualni – do<span class="fh">5%</span>akcji oferowanych z możliwością zwiększenia puli, jeden zapis na maksymalnie<span class="fh">6 000</span>akcji</div>
+        <div class="fakto trigger" data-trigger="fakto" id="fakto03"><img src="images/dot.png" alt="" style="margin-right: 20px;">Oferta publiczna obejmuje sprzedaż do<span class="fh">141 522 067</span>akcji ENERGA SA</div>
+        <div class="fakto trigger" data-trigger="fakto" id="fakto04"><img src="images/dot.png" alt="" style="margin-right: 20px;">Cena maksymalna<span class="fh">20</span><span class="fb">zł</span></div>
+        
+        
+        
+<!--        <div class="fakto trigger" data-trigger="fakto" id="fakto0"><img src="images/dot.png" alt="" style="margin-right: 20px;">Maksymalna wartość oferty to <span class="fh">2 000 </span><span class="fb">mln zł</span></div>
+        <div class="fakto trigger" data-trigger="fakto" id="fakto1"><img src="images/dot.png" alt="" style="margin-right: 20px;">Do obrotu na GPW w Warszawie wprowadzonych zostanie do <span class="fh">30% </span>akcji ENERGA SA</div>
+        <div class="fakto trigger" data-trigger="fakto" id="fakto2"><img src="images/dot.png" alt="" style="margin-right: 20px;">Cena maksymalna to <span class="fh">20</span><span class="fb">zł</span></div>
+        <div class="fakto trigger" data-trigger="fakto" id="fakto3"><img src="images/dot.png" alt="" style="margin-right: 20px;">Struktura akcjonariatu przed i po IPO</div>-->
+        <div id="wykres">
+          <div class="row">
+            <div class="col-md-12 col-lg-6">
+              <div><canvas id="chart1" width="300" height="300"></canvas></div>
+              <div id="wykres-info">
+                <div style="margin-bottom: 15px;"><img src="images/oferta-wykres-info1.png" alt="" style="margin-right: 10px;">Skarb Państwa: 84,18%</div>
+                <div><img src="images/oferta-wykres-info2.png" alt="" style="margin-right: 10px;">Pozostali akcjonariusze: 15,82%</div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+              <div><canvas id="chart2" width="300" height="300"></canvas></div>
+              <div id="wykres-info">
+                <div style="margin-bottom: 15px;"><img src="images/oferta-wykres-info1.png" alt="" style="margin-right: 10px;">Skarb Państwa: 50,00%</div>
+                <div style="margin-bottom: 15px;"><span class="chardesc" style="background-color: #ff6600;"></span>Nowi akcjonariusze: 34,18%</div>
+                <div><img src="images/oferta-wykres-info2.png" alt="" style="margin-right: 10px;">Pozostali akcjonariusze: 15,82%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="next"></div>
+      </div>
+    </div>
+
+  <div id="prospekt-wrapper">
+      <div id="prospekt" class="container">
+        <div id="t17" class="title trigger" data-trigger="title">
+           <a class="wiecej" href="#">Pobierz pełen prospekt emisyjny > </a>
+        </div>
+       <div class="next"></div>
+    </div>
+ </div>
+ 
+ 
+    <div id="harmonogram-wrapper">
+      <div id="harmonogram" class="container">
+        <div id="t5" class="title trigger" data-trigger="title">
+          <h2>Harmonogram oferty</h2>
+          <div class="title-spacer"></div>
+        </div>
+        <div class="cal hidden-xs">
+          <p class="big">Listopad 2013</p>
+          <div class="days clearfix">
+            <div id="ci1" class="cal-info" data-center-top="opacity: 0;" data-center-bottom="opacity: 1;">Zapisy dla inwestorów <br>indywidualnych</div>
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d">1</div>
+            <div class="d">2</div>
+            <div class="d">3</div>
+            <div class="d">4</div>
+            <div class="d">5</div>
+            <div class="d">6</div>
+            <div class="d">7</div>
+            <div class="d">8</div>
+            <div class="d">9</div>
+            <div class="d">10</div>
+            <div class="d">11</div>
+            <div class="d">12</div>
+            <div class="d">13</div>
+            <div class="d">14</div>
+            <div class="d a">15</div>
+            <div class="d a">16</div>
+            <div class="d a">17</div>
+            <div class="d a">18</div>
+            <div class="d a">19</div>
+            <div class="d a">20</div>
+            <div class="d a">21</div>
+            <div class="d a">22</div>
+            <div class="d a">23</div>
+            <div class="d a">24</div>
+            <div class="d a">25</div>
+            <div class="d">26</div>
+            <div class="d">27</div>
+            <div class="d">28</div>
+            <div class="d">29</div>
+            <div class="d">30</div>
+            <div class="d"></div>
+          </div>
+        </div>
+        <div class="cal hidden-xs">
+          <p class="big">Grudzień 2013</p>
+          <div class="days clearfix">
+            <div id="ci2" class="cal-info" data-center-top="opacity: 0;" data-center-bottom="opacity: 1;">Przewidywana <br>data debiutu</div>
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d">1</div>
+            <div class="d">2</div>
+            <div class="d">3</div>
+            <div class="d a">4</div>
+            <div class="d">5</div>
+            <div class="d">6</div>
+            <div class="d">7</div>
+            <div class="d">8</div>
+            <div class="d">9</div>
+            <div class="d">10</div>
+            <div class="d">11</div>
+            <div class="d">12</div>
+            <div class="d">13</div>
+            <div class="d">14</div>
+            <div class="d">15</div>
+            <div class="d">16</div>
+            <div class="d">17</div>
+            <div class="d">18</div>
+            <div class="d">19</div>
+            <div class="d">20</div>
+            <div class="d">21</div>
+            <div class="d">22</div>
+            <div class="d">23</div>
+            <div class="d">24</div>
+            <div class="d">25</div>
+            <div class="d">26</div>
+            <div class="d">27</div>
+            <div class="d">28</div>
+            <div class="d">29</div>
+            <div class="d">30</div>
+            <div class="d">31</div>
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d"></div>
+          </div>
+        </div>
+        
+        <div class="cal-info xs visible-xs" data-center-top="opacity: 0;" data-center-bottom="opacity: 1;">Zapisy dla inwestorów indywidualnych <br>15-25.11.2013 r.</div>
+        <div class="cal-info xs visible-xs" data-center-top="opacity: 0;" data-center-bottom="opacity: 1;">Przewidywana data debiutu <br>4.12.2013 r.</div>
+     <div class="next"></div>
+      </div>
+    </div>
+    
+    
+    <div id="film-wrapper">
+      <div id="film" class="container">
+        <div id="t10" class="title trigger" data-trigger="title">
+          <h2>Poznaj ENERGĘ - nasz film korporacyjny</h2>
+          <div class="title-spacer"></div>
+        </div>
+        <div class="film-container">
+          <img src="images/RamkaFilm.jpg" alt="" />
+          <a class="playimg" href="http://www.youtube.com/watch?v=22RW6CUUfks"></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="zapisy2-wrapper">
+      <div id="zapisy2" class="container">
+        <p>Zapisy na akcje w Punktach Obsługi Klienta domów maklerskich.</p>   <br/>
+        <a href="http://ir.energa.pl" class="big">ir.energa.pl</a>
+        <br/>
+        <img src="images/akcjonariat.jpg" alt="" />
+      </div>
+    </div>
+    
+
+    <div id="zastrzezenia-wrapper">
+      <div id="zastrzezenia" class="container">
+        <p>Zastrzeżenia prawne:</p>
+
+        <p>Niniejszy materiał nie może być rozpowszechniany, bezpośrednio lub pośrednio, w całości lub w części, w Stanach Zjednoczonych Ameryki, Australii, Kanadzie, Japonii ani w jakiejkolwiek innej jurysdykcji, w której rozpowszechnianie informacji w nim zawartych może podlegać ograniczeniom lub być zakazane przez prawo.</p>
+
+        <p>Niniejszy materiał ma wyłącznie charakter promocyjny i w żadnym przypadku nie stanowi oferty sprzedaży, zaproszenia do złożenia oferty nabycia ani podstawy do podjęcia decyzji w przedmiocie inwestycji w papiery wartościowe spółki ENERGA S.A. (<b>„Spółka”</b>). Prospekt (<b>„Prospekt”</b>), sporządzony w związku z ofertą publiczną akcji Spółki w Polsce i ich dopuszczeniem oraz wprowadzeniem do obrotu na rynku regulowanym prowadzonym przez Giełdę Papierów Wartościowych w Warszawie został zatwierdzony przez Komisję Nadzoru Finansowego i jest jedynym prawnie wiążącym dokumentem zawierającym informacje o Spółce i ofercie publicznej akcji Spółki w Polsce. Prospekt został opublikowany i jest dostępny na stronie internetowej Spółki (<a href="hrrp://www.grupaenerga.pl">www.grupaenerga.pl</a>)
+oraz na stronie internetowej oferującego, Powszechnej Kasy Oszczędności Bank Polski S.A. Oddział – Dom Maklerski PKO Banku Polskiego w Warszawie (<a href="http://www.dm.pkobp.pl">www.dm.pkobp.pl</a>).</p>
+
+        <p>Niniejszy materiał nie stanowi rekomendacji w rozumieniu Rozporządzenia Ministra Finansów z dnia 19 października 2005 r. w sprawie informacji stanowiących rekomendacje dotyczące instrumentów finansowych, ich emitentów lub wystawców.</p>
+
+        <p>Niniejszy materiał (ani zawarte w nim informacje) nie zawiera i nie stanowi oferty sprzedaży papierów wartościowych ani zaproszenia do składania ofert ich nabycia w Stanach Zjednoczonych Ameryki, Australii, Kanadzie, Japonii ani w jakiejkolwiek innej jurysdykcji, w której taka oferta lub zaproszenie stanowiłyby naruszenie właściwych przepisów prawa lub wymagały rejestracji.</p>
+
+        <p>Akcje Spółki o których mowa w niniejszym materiale nie mogą być zbywane w Stanach Zjednoczonych Ameryki, jeżeli nie zostały zarejestrowane przez Amerykańską Komisję Papierów Wartościowych i Giełd (ang. United States Securities and Exchange Commission) i nie podlegają zwolnieniu z obowiązku rejestracji na mocy odpowiednich postanowień amerykańskiej ustawy o  papierach wartościowych z 1933 roku, ze zmianami (ang. U.S. Securities Act of 1933, <b>„Amerykańska Ustawa o Papierach Wartościowych”</b>). Akcje Spółki nie zostały i nie zostaną zarejestrowane zgodnie z postanowieniami Amerykańskiej Ustawy o Papierach Wartościowych i nie mogą być oferowane ani zbywane w Stanach Zjednoczonych Ameryki, chyba że w ramach zwolnienia z obowiązków rejestracyjnych
+lub w ramach transakcji nie podlegających obowiązkowi rejestracyjnemu wynikającemu z Amerykańskiej Ustawy o Papierach Wartościowych. Nie będzie prowadzona żadna oferta publiczna akcji Spółki w Stanach Zjednoczonych.</p>
+
+        <p>Niniejszy materiał jest udostępniany i przeznaczony wyłącznie (A) na terenie Europejskiego Obszaru Gospodarczego – dla osób będących „kwalifikowanymi inwestorami” w rozumieniu art. 2(1)(e) Dyrektywy Prospektowej (tzn. Dyrektywy 2003/71/WE z późniejszymi zmianami, w tym zmieniającą ją Dyrektywą 2010/73/UE, w zakresie zaimplementowanym w danym państwie członkowskim) (<b>„Kwalifikowani Inwestorzy”</b>), (B) na terytorium Zjednoczonego Królestwa Wielkiej Brytanii – (i) dla osób mających doświadczenie zawodowe w zakresie inwestycji tzn. trudniących się zawodowo inwestycjami (ang. investment professionals) w rozumieniu art. 19(5) Rozporządzenia z 2005 roku w Sprawie Ofert Papierów Wartościowych będącego aktem wykonawczym do Ustawy o Usługach i Rynkach
+Finansowych z 2000 roku (The Financial Services and Markets Act 2000 (Financial Promotion) Order 2005) (<b>„Rozporządzenie”</b>) i (ii) dla osób spełniających kryteria określone w art. 49(2)(a) do (d) Rozporządzenia, i/lub (C) dla innych osób, którym może zostać zgodnie z prawem ujawniony (osoby wskazane w pkt. (A), (B) i (C) powyżej będą łącznie nazywane <b>„Osobami Uprawnionymi”</b>). Akcje Spółki, a także każde zaproszenie, oferta, zapis, zlecenie kupna lub nabycia ich w inny sposób będą udostępniane wyłącznie Osobom Uprawnionym. Osoby, które nie są Osobami Uprawnionymi nie powinny działać w oparciu o informacje zamieszczone w niniejszym materiale, ani w oparciu o zawarte w nich treści, ani na nich polegać.</p>
+
+        <p>[Niniejszy materiał może zawierać stwierdzenia dotyczące przyszłości. Stwierdzenia dotyczące przyszłości opierają się na wielu założeniach dotyczących aktualnej i przyszłej działalności Spółki oraz otoczenia, w którym Spółka działa obecnie i będzie działała w przyszłości. Do założeń tych należą, w szczególności, zdolność Spółki do realizacji swojej strategii, a także oczekiwania dotyczące rentowności i wzrostu, rozwoju sytuacji w sektorze energetycznym, nakładów kapitałowych, dostępności finansowania oraz planowanych przez Spółkę działań restrukturyzacyjnych i reorganizacyjnych. Stwierdzenia dotyczące przyszłości opierają się na aktualnej ocenie Zarządu oraz, siłą rzeczy, na okolicznościach, które będą miały miejsce
+dopiero w przyszłości i ze swej natury są uzależnione od szeregu znanych i nieznanych kwestii obarczonych różnymi ryzykami, na które Spółka nie ma wpływu. Oznacza to, że niektóre istotne ryzyka mogą spowodować, że zdarzenia opisane w stwierdzeniach dotyczących przyszłości będą się znacząco różnić od faktycznego stanu rzeczy, a tym samym spowodować, że rzeczywiste wyniki Spółki lub jej sytuacja finansowa czy perspektywy będą znacząco odbiegać od tych wyrażonych lub wynikających ze stwierdzeń dotyczących przyszłości, a także od historycznych wyników i osiągnięć Spółki.]</p>
+    <div class="next"></div>
+      </div>
+    </div>
+
+    <script src="js/skrollr.stylesheets.js"></script>
+    <script src="js/skrollr.js"></script>
+    <script src="js/triggers.js"></script>
+
+  </body>
+</html>
+           

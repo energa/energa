@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'energaregular';
+    src: url('../fonts/energa/energa.eot');
+    src: url('../fonts/energa/energa.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/energa/energa.woff') format('woff'),
+         url('../fonts/energa/energa.ttf') format('truetype'),
+         url('../fonts/energa/energa.svg#energaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'energabold';
+    src: url('../fonts/energa/energabold.eot');
+    src: url('../fonts/energa/energabold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/energa/energabold.woff') format('woff'),
+         url('../fonts/energa/energabold.ttf') format('truetype'),
+         url('../fonts/energa/energabold.svg#energabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
