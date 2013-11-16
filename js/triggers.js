@@ -67,10 +67,8 @@ function trigger_counterrp($self) {
   $self.find('.rp-counter').reverse().each(function (index, item) {
     var $counter = $(item).find('.counter');
 
-    $(item).find('label').delay(1000*index).animate({ opacity: 1 }, 300, function() {
-
-    });
-    $(item).find('.cake').delay(1000*index).animate({ opacity: 1 }, 300, function() {
+    $(item).find('label').delay(500*index).animate({ opacity: 1 }, 300);
+    $(item).find('.cake').delay(500*index).animate({ opacity: 1 }, 300, function() {
       counter($counter);
       $(this).parent().find('.counter').animate({ opacity: 1 }, 300);
       $(this).parent().find('.raisin').animate({ opacity: 1 }, 300);
@@ -132,7 +130,15 @@ function trigger_infopracownicy($self) {
 }
 
 function trigger_navtabs($self) {
-  $self.animate({opacity:1, marginLeft:0}, 300);
+  var counter = 0;
+  $self.find('li').each(function(){
+    var $item = $(this);
+      setTimeout(function(){
+        $item.animate({opacity: 1}, 800);
+      }, counter);
+
+      counter += 300;
+  });
 }
 function trigger_charts($self) {
   runAniChart($self.find('.schart').first(), 200);
@@ -203,13 +209,33 @@ function trigger_slideleft($self) {
 function trigger_slideright($self) {
   $self.animate({ opacity: 1, left: 0 }, 300);
 }
-function trigger_rozcenterdiv($self) {
-  $('#rzd1show').animate({ opacity: 1, marginLeft: 0 }, 300);
-}
+
 function trigger_faktitem($self) {
-  $self.animate({opacity: 1, marginLeft: 0}, 500, function(){
-    $(this).find('.desc, .ns').animate({opacity: 1, marginLeft: 0}, 300);
-  });
+
+      if(typeof $self.parents('.tab-content').first().find('ul').first().find('a').data('open') === 'undefined') {
+
+
+        $self.parents('.tab-content').first().find('ul').first().find('a').data('open',true);
+        var counter = 0;
+        $self.parents('.tab-pane').first().find('.faktitem.fakt').each(function(){
+          var self = $(this);
+            setTimeout(function(){
+
+              self.animate({opacity: 1, marginLeft: 0}, 500, function(){
+                $(this).find('.desc, .ns').animate({opacity: 1, marginLeft: 0}, 300);
+              });
+
+            }, counter);
+
+            counter += 300;
+        });
+        if($self.parents('.row').first().find('#rzd1show').length > 0){
+          $('#rzd1show').animate({ opacity: 1, marginLeft: 0 }, 600);
+        }
+        
+      }
+
+
 }
 
 $(function() {

@@ -21,12 +21,18 @@
     <script src="js/scripts.js"></script>
     <!--<script src="js/less.js"></script>-->
     <script src="js/jquery.color.js"></script>
+    <script src="js/jquery.scrollTo-min.js"></script>
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
   </head>
   <body id="skrollr-body">
+  <div id="menu-sub"><img src="images/MenuDesktopTablet.png" alt="MENU" /></div>
+  <div id="menu-sub-content">
+  <img src="images/logotypMenu.jpg" alt="ENERGA" />
+  <div><span><a href="#area1">ENERGA dziś</a> <a href="#area2">ENERGA jutro</a> <a href="#area3">Włącz się do zapisów</a></span></div>
+  </div>
 
     <div id="intro-wrapper">
       <div id="intro" class="container">
@@ -40,7 +46,7 @@
     <div id="zapisy-wrapper">
       <div id="zapisy" class="container">
         <p class="big">Zapisy na akcje w <b>Punktach Obsługi Klienta</b> <br />domów maklerskich tylko do <b>2 grudnia 2013 r.</b></p>
-        <a class="wiecej" href="#">więcej informacji >></a>
+        <a class="wiecej" href="http://ir.energa.pl">więcej informacji >></a>
         <br/>  <br/>
         <p class="small">
 			Podany termin dotyczy zapisów na akcje ENERGA SA w transzy dla Inwestorów Indywidualnych. <br />
@@ -51,7 +57,7 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
         </p>
         
         
-        <div class="next"></div>
+        <div id="area1" class="next"></div>
       </div>
     </div>
 
@@ -279,28 +285,28 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
               <div class="tab-pane fade in active" id="dystrybucja">
 
               
-                <div class="faktitem fakt trigger" id="tbcf1" data-trigger="faktitem">
+                <div class="faktitem zero fakt trigger" id="tbcf1" data-trigger="faktitem">
                   <div class="icon"><img src="images/f1.png" /></div>
                   <div class="desc">
                     sieć dystrybucyjna o długości ponad <span class="fh">193</span> <span class="fb">tys. km</span>
                   </div>         
                 </div> 
 
-                <div class="faktitem fakt trigger" id="tbcf2" data-trigger="faktitem">
+                <div class="faktitem zero fakt" id="tbcf2">
                   <div class="icon"><img src="images/f2.png" /></div>
                   <div class="desc">
                    obejmuje powierzchnię <span class="fh">77</span> <span class="fb">tys. km²</span> czyli 25% obszaru Polski
                   </div>         
                 </div>  
                 
-                <div class="faktitem fakt trigger" id="tbcf3" data-trigger="faktitem">
+                <div class="faktitem zero fakt" id="tbcf3">
                   <div class="icon"><img src="images/f3.png" /></div>
                   <div class="desc">
                     ponad <span class="fh">20</span> <span class="fb">TWh</span> energii przesyłanej rocznie**
                   </div>         
                 </div> 
                 
-                <div class="faktitem fakt trigger" id="tbcf4" data-trigger="faktitem">
+                <div class="faktitem zero fakt" id="tbcf4">
                   <div class="icon"><img src="images/f4.png" /></div>
                   <div class="desc">
                    ponad <span class="fh">75%</span> <span class="fb">zysku EBITDA</span>pochodzi z kluczowego dla Grupy segmentu dystrybucji
@@ -322,7 +328,7 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
               <div class="tab-pane fade" id="wytwarzanie">
                 <div class="row">
                   <div class="col-md-12 col-lg-6">
-                    <div class="faktitem fakt">
+                    <div class="faktitem fakt zero">
                         <div class="icon"><img src="images/f5.png" /></div>
                         <div class="desc">
                           <span class="fh">4,1</span> <span class="fb">TWh</span><span class="desc-text">energii <br />produkowanej<br /> rocznie**</span>
@@ -331,7 +337,7 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
                   </div>
                   
                   <div class="col-md-12 col-lg-6">
-                    <div class="faktitem fakt">
+                    <div class="faktitem fakt zero">
                       <div class="icon"><img src="images/f6.png" /></div>
                       <div class="desc">
                           <span class="fh">1,3</span> <span class="fb">GW</span> <span class="desc-text">łącznej mocy <br />wytwórczej<span>
@@ -342,7 +348,7 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
                 <div class="row">
 
                   <div class="col-md-12 col-lg-6">
-                    <div class="faktitem fakt">
+                    <div class="faktitem fakt zero">
                       <div class="icon"><img src="images/f7.png" /></div>
                       <div class="desc">
                       <span class="fh">47 </span> <span class="fs desc-text">elektrowni <br />wodnych</span>
@@ -351,7 +357,7 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
                   </div> 
                  
                   <div class="col-md-12 col-lg-6">
-                    <div class="faktitem fakt">
+                    <div class="faktitem fakt zero">
                         <div class="icon"><img src="images/f8.png" /></div>
                         <div class="desc">
                           <span class="fh">89 </span><span class="desc-text">turbin wiatrowych <br />na 3 farmach</span>
@@ -360,7 +366,7 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
                   </div> 
 
                    <div class="col-md-12 col-lg-6" style="width: 100% !important;">
-                    <div class="faktitem fakt">
+                    <div class="faktitem fakt zero">
                         <div class="icon"><img src="images/f9.png" /></div>
                         <div class="desc">
                            <span class="fh">38% </span><span class="desc-text">produkowanej energii pochodzi ze źródeł odnawialnych<span>
@@ -369,7 +375,7 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
                    </div> 
                    
                     <div class="col-md-12 col-lg-6" style="width: 100% !important;">
-                    <div class="faktitem fakt">
+                    <div class="faktitem fakt zero">
                         <div class="icon"><img src="images/f10.png" /></div>
                         <div class="desc">
                            <span class="fh">36% </span> <span class="desc-text">wszystkich źródeł odnawialnych w Polsce jest<br /> przyłączonych do sieci Grupy ENERGA</span>
@@ -390,7 +396,7 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
               <div class="tab-pane fade" id="sprzedaż">
                 <div class="row">
                   <div class="col-md-12 col-lg-6">
-                    <div class="faktitem fakt">
+                    <div class="faktitem fakt zero">
                         <div class="icon"><img src="images/f11.png" /></div>
                         <div class="desc">
                             <span class="fh">2,9</span> <span class="fb">mln</span><span class="desc-text">Klientów</span>
@@ -398,7 +404,7 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
                     </div> 
                   </div>    
                   <div class="col-md-12 col-lg-6">
-                    <div class="faktitem fakt">
+                    <div class="faktitem fakt zero">
                         <div class="icon"><img src="images/f12.png" /></div>
                         <div class="desc">
                 					<span class="fh">25 </span><span class="desc-text">nowoczesnych <br />Biur Obsługi Klienta</span>
@@ -410,14 +416,14 @@ ustawowo wolnych od pracy, z tym że kończą się najpóźniej o godzinie 17:00
                 <div class="row">
                 
                   <div class="col-sm-12 col-md-6">
-                    <div class="faktitem fakt">
+                    <div class="faktitem fakt zero">
                         <span class="fi"><img src="images/f13.png" /></span>
       				          <span class="fs highest-quality">Najwyższa jakość obsługi Klienta**</span>   
                     </div> 
                     
                   </div>   
                   <div class="col-sm-12 col-md-6">
-                    <div class="faktitem fakt">
+                    <div class="faktitem fakt zero">
                       <div id="przyjazna">**FIRMA PRZYJAZNA KLIENTOWI wyróżnienie dla <br>ENERGA Obsługa i Sprzedaż otrzymane w 2012 r.</div>
                     </div>
                   </div>  
@@ -651,7 +657,7 @@ inne spółki.</p>
 
 
 
-
+<div id="area2"></div>
 <div id="jutro-wrapper">
       <div id="jutro" class="container">
         <div id="t8" class="title trigger" data-trigger="title">
@@ -677,10 +683,10 @@ inne spółki.</p>
             <div class="row">
               <div class="col-md-12 col-lg-6">
                 <div class="faktitem fakt trigger" id="tbcf11" data-trigger="faktitem"><span class="fi"><img src="images/roz1.jpg" /></span><span class="ns big">Modernizacja i rozbudowa<br> sieci dystrybucyjnej</span></div>
-                <div class="faktitem fakt trigger" id="tbcf12" data-trigger="faktitem"><span class="fi"><img src="images/roz2.jpg" /></span><span class="ns big">Koncentracja<br> na jakości i niezawodności usług</span></div>
-                <div id="rzd1" class="trigger" data-trigger="rozcenterdiv"></div>
-                <div class="faktitem fakt trigger" id="tbcf13" data-trigger="faktitem"><span class="fi"><img src="images/roz3.jpg" /></span><span class="ns big">Przyłączanie<br> nowych klientów</span></div>
-                <div class="faktitem fakt trigger" id="tbcf14" data-trigger="faktitem"><span class="fi"><img src="images/roz4.jpg" /></span><span class="ns big">Wzrost<br> efektywności operacyjnej</span></div>
+
+                <div class="faktitem fakt" id="tbcf12"><span class="fi"><img src="images/roz2.jpg" /></span><span class="ns big">Koncentracja<br> na jakości i niezawodności usług</span></div>
+                <div class="faktitem fakt" id="tbcf13"><span class="fi"><img src="images/roz3.jpg" /></span><span class="ns big">Przyłączanie<br> nowych klientów</span></div>
+                <div class="faktitem fakt" id="tbcf14"><span class="fi"><img src="images/roz4.jpg" /></span><span class="ns big">Wzrost<br> efektywności operacyjnej</span></div>
               </div>
               <div id="rzd1show" class="col-md-12 col-lg-6 roz-center-div">
                 <div class="roz-center"><img src="images/roz5.jpg" /></div>
@@ -749,7 +755,7 @@ inne spółki.</p>
               <div data-top="opacity:1;right:10%;" data-600-top="opacity:0;right:7%;" style="top: 80%; font-size: 1.3em;">Stabilność</div>
               <div data-top="opacity:1;left:40%;" data-800-top="opacity:0;left:30%;" style="top: 90%; font-size: 2.2em;">Innowacyjność</div>
             </div>
-            <div class="next"></div>
+            <div class="next" id="area3"></div>
           </div>
         </div>
 

@@ -1,3 +1,39 @@
+#menu-sub {
+  width: 58px;
+  height: 58px;
+  display: block;
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  z-index: 1010;
+}
+#menu-sub-content {
+  background-color: #701246;
+  width: 100%;
+  height: 100px;
+  display: none;
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+#menu-sub-content div {
+  display: block;
+  margin: 2em auto;
+  text-align: center;
+}
+#menu-sub-content div a {
+  margin: 0 0.5em;
+}
+#menu-sub-content div a:hover {
+  color: #99CC00;
+}
+#menu-sub-content img {
+  position: absolute;
+  left: 1em;
+}
 .chart-container {
   color: #fff;
   background-color: #711246;
@@ -184,6 +220,9 @@ p {
 .fakt.faktitem {
   margin-bottom: 30px;
 }
+.fakt.faktitem.zero {
+  margin-bottom: 0px;
+}
 .faktitem,
 .faktitem .desc {
   opacity: 0;
@@ -331,7 +370,7 @@ body {
 #zapisy-wrapper {
   background-color: #5fa92c;
   color: #fff;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
   padding-bottom: 40px;
 }
@@ -352,7 +391,7 @@ body {
 #film-wrapper {
   background-color: #99cc00;
   color: #fff;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
   padding-bottom: 40px;
 }
@@ -385,7 +424,7 @@ body {
 #dzis-wrapper {
   background-color: #711246;
   color: #fff;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 #dzis-wrapper .title-spacer {
@@ -483,7 +522,7 @@ body {
 }
 #rp-wrapper {
   background-color: #f1f1f1;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 #rp-wrapper #rp {
@@ -565,7 +604,7 @@ body {
   background: transparent url(../images/rp-next.png) 0 0 no-repeat;
 }
 #misja-wrapper {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 #misja-wrapper #misja {
@@ -598,7 +637,7 @@ body {
   background: transparent url(../images/misja-next.png) 0 0 no-repeat;
 }
 #segmenty-wrapper {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 #segmenty-wrapper #segmenty {
@@ -646,7 +685,7 @@ body {
   background: transparent url(../images/misja-next.png) 0 0 no-repeat;
 }
 #jutro-wrapper {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 #jutro-wrapper #jutro {
@@ -683,7 +722,7 @@ body {
   background: transparent url(../images/misja-next.png) 0 0 no-repeat;
 }
 #harmonogram-wrapper {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
   background-color: #ff6600;
 }
@@ -785,7 +824,7 @@ body {
   padding-top: 0;
 }
 #oferta-wrapper {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 #oferta-wrapper .chardesc {
@@ -818,7 +857,7 @@ body {
 }
 #wzrost-wrapper {
   background-color: #711246;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 #wzrost-wrapper #wzrost {
@@ -840,7 +879,7 @@ body {
 }
 #wczoraj-wrapper {
   background-color: #711246;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 #wczoraj-wrapper #wczoraj {
@@ -863,7 +902,7 @@ body {
   background: transparent url(../images/title-bg-100-white.png) 0 0 no-repeat;
 }
 #zapisy2-wrapper {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
   background-color: #fff;
 }
@@ -878,7 +917,7 @@ body {
   font-weight: normal;
 }
 #prospekt-wrapper {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
   background-color: #99cc00;
 }
@@ -901,7 +940,7 @@ body {
 }
 #zastrzezenia-wrapper {
   background-color: #f5f5f5;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
   padding-top: 0px;
 }
@@ -1105,9 +1144,8 @@ ul.nav li.active a:after {
     opacity: 1!important;
   }
 }
-.nav-tabs {
+.nav-tabs li {
   opacity: 0;
-  margin-left: -120px;
 }
 #rozwoj-dystrybucji span,
 #rozwoj-odnawialnych span,

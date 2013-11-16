@@ -1,6 +1,45 @@
 @import "variables.less";
 @import "mixins.less";
 
+#menu-sub {
+  width: 58px;
+  height: 58px;
+  display: block;
+  position: fixed;
+  top :1em;
+  right: 1em;
+  cursor: pointer;
+  z-index: 1010;
+}
+#menu-sub-content {
+  background-color: #701246;
+  width: 100%;
+  height: 100px;
+  display: none;
+  position: fixed;
+  top: 0px;  
+  z-index: 1000;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  div {
+    display: block;
+    margin: 2em auto;
+    text-align: center;
+    a {
+      margin: 0 0.5em;
+    }
+    a:hover {
+      color: #99CC00;
+    }
+  }
+  img {
+    position: absolute;
+    left: 1em;
+  }
+}
+
+
+
 .chart-container {
   color: #fff;
   background-color: @brand-color;
@@ -89,7 +128,7 @@
 }
 
 .wrapper-padding () {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 
@@ -232,6 +271,9 @@ p {
 }
 .fakt.faktitem {
   margin-bottom: 30px;
+}
+.fakt.faktitem.zero {
+  margin-bottom: 0px;
 }
 .faktitem,
 .faktitem .desc {
@@ -1151,9 +1193,8 @@ ul.nav {
     }
   }
 }
-.nav-tabs {
+.nav-tabs li {
   opacity: 0;
-  margin-left: -120px;
 }
 
 #rozwoj-dystrybucji, 

@@ -76,8 +76,6 @@
     
    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       if(typeof $(this).data('open') === 'undefined') {
-
-
         $(this).data('open',true);
         var counter = 0;
         $($(this).attr('href')).find('.faktitem.fakt').each(function(){
@@ -92,14 +90,18 @@
 
             counter += 300;
         });
-
-
       }
-
-
    })
     
 
+    $('#menu-sub').click(function(){
+        $('#menu-sub-content').slideToggle(400);
+    });
+
+    $('#menu-sub-content a').click(function(){
+
+        $.scrollTo($(this).attr('href'),800, {offset:-60});
+    });
 
   });
 })(jQuery);
